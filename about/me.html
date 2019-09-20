@@ -14,6 +14,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
   <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
 
 <link rel="stylesheet" href="/css/main.css?v=7.4.0">
 
@@ -30,7 +32,7 @@
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -55,17 +57,17 @@
   };
 </script>
 
-  <meta name="description" content="This is a test about how it goes">
+  <meta name="description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
 <meta property="og:type" content="website">
-<meta property="og:title" content="About me">
+<meta property="og:title" content="About this blog">
 <meta property="og:url" content="https://bensonater.github.io/about/me.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="This is a test about how it goes">
+<meta property="og:description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T12:52:47.288Z">
+<meta property="og:updated_time" content="2019-09-20T12:58:49.738Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About me">
-<meta name="twitter:description" content="This is a test about how it goes">
+<meta name="twitter:title" content="About this blog">
+<meta name="twitter:description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
   <link rel="canonical" href="https://bensonater.github.io/about/me">
 
 
@@ -80,7 +82,7 @@
   };
 </script>
 
-  <title>About me | Return 0</title>
+  <title>About this blog | Return 0</title>
   
 
 
@@ -115,11 +117,6 @@
 </noscript>
 
 </head>
-
-
-
-
-
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
   <div class="container use-motion">
@@ -177,6 +174,28 @@
       
       
         
+        <li class="menu-item menu-item-archives">
+      
+    
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">6</span></a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-about">
       
     
@@ -190,29 +209,7 @@
       
     
 
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-tags">
-      
-    
-      
-      
-        
-      
-        
-      
-        
-          
-        
-      
-    
-
-    <a href="/CS_Theory/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags<span class="badge">2</span></a>
+    <a href="/about/me.html" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
 
   </li>
   </ul>
@@ -222,10 +219,6 @@
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main id="main" class="main">
@@ -255,7 +248,7 @@
     <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">About me
+<h1 class="post-title" itemprop="name headline">About this blog
 
 </h1>
 
@@ -271,8 +264,8 @@
       
       <div class="post-body">
         
-          <p>This is a test about how it goes</p>
-
+          
+        
       </div>
       
       
@@ -330,20 +323,11 @@
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
         
-          <a href="/archives">
+          <a href="/archives/">
         
           <span class="site-state-item-count">6</span>
           <span class="site-state-item-name">posts</span>
         </a>
-      </div>
-    
-      
-      
-      <div class="site-state-item site-state-tags">
-        
-        <span class="site-state-item-count">2</span>
-        <span class="site-state-item-name">tags</span>
-        
       </div>
     
   </nav>
@@ -351,6 +335,11 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
 
     </div>
   </aside>
@@ -368,9 +357,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Benson Zhou</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.4.0</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
 
         
 
@@ -431,8 +418,4 @@
   
 
 </body>
-
-
-
-
 </html>
