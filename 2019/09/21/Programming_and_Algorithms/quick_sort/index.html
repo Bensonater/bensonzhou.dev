@@ -57,18 +57,18 @@
   };
 </script>
 
-  <meta name="description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
+  <meta name="description" content="The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Insertion Sort">
-<meta property="og:url" content="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/index.html">
+<meta property="og:title" content="Quick Sort">
+<meta property="og:url" content="https://bensonater.github.io/2019/09/21/Programming_and_Algorithms/quick_sort/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
+<meta property="og:description" content="The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T09:08:03.919Z">
+<meta property="og:updated_time" content="2019-09-21T11:07:05.547Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Insertion Sort">
-<meta name="twitter:description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
-  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/">
+<meta name="twitter:title" content="Quick Sort">
+<meta name="twitter:description" content="The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.">
+  <link rel="canonical" href="https://bensonater.github.io/2019/09/21/Programming_and_Algorithms/quick_sort/">
 
 
 <script id="page-configurations">
@@ -82,7 +82,7 @@
   };
 </script>
 
-  <title>Insertion Sort | Return 0</title>
+  <title>Quick Sort | Return 0</title>
   
 
 
@@ -235,7 +235,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/21/Programming_and_Algorithms/quick_sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -247,7 +247,7 @@
       <meta itemprop="name" content="Return 0">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Insertion Sort
+        <h1 class="post-title" itemprop="name headline">Quick Sort
 
           
         </h1>
@@ -263,7 +263,7 @@
                 
               
 
-              <time title="Created: 2019-09-20 11:00:15 / Modified: 10:08:03" itemprop="dateCreated datePublished" datetime="2019-09-20T11:00:15+01:00">2019-09-20</time>
+              <time title="Created: 2019-09-21 12:03:13 / Modified: 12:07:05" itemprop="dateCreated datePublished" datetime="2019-09-21T12:03:13+01:00">2019-09-21</time>
             </span>
           
             
@@ -282,11 +282,27 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+        <p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <a id="more"></a>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">numbers = [3, 2, 1, 5, 36, 7, 13, 21]</span><br><span class="line"></span><br><span class="line">for i in range(1, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    while j &gt; 0 and temp &lt; numbers[j - 1]:</span><br><span class="line">        numbers[j] = numbers[j - 1]</span><br><span class="line">       	j -= 1</span><br><span class="line">   	numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">def partition(a_list, start, end):</span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + 1</span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = False</span><br><span class="line"></span><br><span class="line">    while not finished:</span><br><span class="line">        while left_mark &lt;= right_mark and a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += 1</span><br><span class="line">        while a_list[right_mark] &gt;= pivot and right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= 1</span><br><span class="line">        if right_mark &lt; left_mark:</span><br><span class="line">            finished = True</span><br><span class="line">        else:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    return right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def quick_sort(a_list, start, end):</span><br><span class="line">    if start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - 1)</span><br><span class="line">        quick_sort(a_list, split + 1, end)</span><br><span class="line">    return a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [8, 5, 3, 4, 2, 11, 7]</span><br><span class="line">sorted_a = quick_sort(a, 0, len(a)-1)</span><br><span class="line">print(sorted_a)</span><br></pre></td></tr></table></figure>
 
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
 
     </div>
 
@@ -303,8 +319,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/20/Programming_and_Algorithms/bubble_sort/" rel="next" title="Bubble Sort">
-                  <i class="fa fa-chevron-left"></i> Bubble Sort
+                <a href="/2019/09/21/Programming_and_Algorithms/merge_sort/" rel="next" title="Merge Sort">
+                  <i class="fa fa-chevron-left"></i> Merge Sort
                 </a>
               
             </div>
@@ -312,10 +328,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/20/CS_Theory/os/" rel="prev" title="Operating System">
-                  Operating System <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -364,7 +376,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-Implementation"><span class="nav-number">1.</span> <span class="nav-text">Python Implementation</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-Implementation"><span class="nav-number">1.</span> <span class="nav-text">Python Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm"><span class="nav-number">2.</span> <span class="nav-text">Advantages and disadvantages of the quick sort algorithm</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->

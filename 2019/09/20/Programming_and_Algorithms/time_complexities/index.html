@@ -60,15 +60,15 @@
   <meta name="description" content="Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the Big O notation, such as O(n). An algorithm with a low order of n is favourable.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Time Complexities">
-<meta property="og:url" content="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time-complexities/index.html">
+<meta property="og:url" content="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time_complexities/index.html">
 <meta property="og:site_name" content="Return 0">
 <meta property="og:description" content="Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the Big O notation, such as O(n). An algorithm with a low order of n is favourable.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T22:04:52.295Z">
+<meta property="og:updated_time" content="2019-09-21T11:09:07.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Time Complexities">
 <meta name="twitter:description" content="Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the Big O notation, such as O(n). An algorithm with a low order of n is favourable.">
-  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time-complexities/">
+  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time_complexities/">
 
 
 <script id="page-configurations">
@@ -189,7 +189,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">7</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">9</span></a>
 
   </li>
       
@@ -235,7 +235,7 @@
   
   
   <div class="post-block post">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time-complexities/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time_complexities/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -263,11 +263,19 @@
                 
               
 
-              <time title="Created: 2019-09-20 19:45:07 / Modified: 23:04:52" itemprop="dateCreated datePublished" datetime="2019-09-20T19:45:07+01:00">2019-09-20</time>
+              <time title="Created: 2019-09-20 19:45:07" itemprop="dateCreated datePublished" datetime="2019-09-20T19:45:07+01:00">2019-09-20</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-09-21 12:09:07" itemprop="dateModified" datetime="2019-09-21T12:09:07+01:00">2019-09-21</time>
+              </span>
             
           
 
@@ -289,17 +297,15 @@
 <p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
 <h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion_sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
 <p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a>Merge Sort</h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge_sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
 <p>The basic steps are:</p>
 <ul>
 <li>Divide the unsorted list into n sublists, each containing one element</li>
 <li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
 </ul>
 <p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">procedure mergesort(mergelist)</span><br><span class="line">if len(mergelist) &gt; 1 then</span><br><span class="line">mid = len(mergelist) div 2</span><br><span class="line">lefthalf = mergelist[:mid]</span><br><span class="line">righthalf = mergelist[mid:]</span><br><span class="line">mergesort(lefthalf)</span><br><span class="line">mergesort(righthalf)</span><br><span class="line">i = 0</span><br><span class="line">j = 0</span><br><span class="line">k = 0</span><br><span class="line">while i &lt; len(lefthalf) and j &lt; len(righthalf)</span><br><span class="line">if lefthalf[i] &lt; righthalf[j] then</span><br><span class="line">mergelist[k] = lefthalf[i]</span><br><span class="line">i = i + 1</span><br><span class="line">else</span><br><span class="line">mergelist[k] = righthalf[j]</span><br><span class="line">j = j + 1</span><br><span class="line">endif</span><br><span class="line">12-6259</span><br><span class="line">k = k + 1</span><br><span class="line">endwhile</span><br><span class="line">while i &lt; len(lefthalf)</span><br><span class="line">// check if left half has</span><br><span class="line">elements not merged</span><br><span class="line">mergelist[k] = lefthalf[i] // if so, add to mergelist</span><br><span class="line">i = i + 1</span><br><span class="line">k = k + 1</span><br><span class="line">endwhile</span><br><span class="line">while j &lt; len(righthalf)</span><br><span class="line">// check if rt half has elements</span><br><span class="line">not merged</span><br><span class="line">mergelist[k] = righthalf[j] // if so, add to mergelist</span><br><span class="line">j = j + 1</span><br><span class="line">k = k + 1</span><br><span class="line">endwhile</span><br><span class="line">endif</span><br><span class="line">endprocedure</span><br><span class="line">// ****** main program *******</span><br><span class="line">mergelist = [5, 3, 2, 7, 9, 1, 3, 8]</span><br><span class="line">mergesort(mergelist)</span><br><span class="line">print(mergelist)</span><br></pre></td></tr></table></figure>
-
 <h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
-<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a>Quick Sort</h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick_sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <p>The steps in the quick sort are as follows:</p>
 <ul>
 <li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
@@ -312,17 +318,12 @@
 </li>
 </ul>
 <p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h3 id="Python-Implementation-1"><a href="#Python-Implementation-1" class="headerlink" title="Python Implementation"></a>Python Implementation</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h3><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
-<h2 id="Summary-of-sort-algorithms"><a href="#Summary-of-sort-algorithms" class="headerlink" title="Summary of sort algorithms"></a>Summary of sort algorithms</h2><ul>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
 <li><a href="/2019/09/20/Programming_and_Algorithms/bubble_sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
 <li><a href="/2019/09/20/Programming_and_Algorithms/insertion_sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
-<li>Merge sort is O(n log n) but requires additional memory space for the merging process</li>
-<li>Quick sort is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge_sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick_sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
 </ul>
 
     </div>
@@ -349,6 +350,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/09/21/Programming_and_Algorithms/merge_sort/" rel="prev" title="Merge Sort">
+                  Merge Sort <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -397,7 +402,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">1.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">3.</span> <span class="nav-text">Merge Sort</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Implementation"><span class="nav-number">3.1.</span> <span class="nav-text">Python Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Space-Complexity"><span class="nav-number">3.2.</span> <span class="nav-text">Space Complexity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Sort"><span class="nav-number">4.</span> <span class="nav-text">Quick Sort</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Python-Implementation-1"><span class="nav-number">4.1.</span> <span class="nav-text">Python Implementation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm"><span class="nav-number">4.2.</span> <span class="nav-text">Advantages and disadvantages of the quick sort algorithm</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary-of-sort-algorithms"><span class="nav-number">5.</span> <span class="nav-text">Summary of sort algorithms</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Bubble-Sort"><span class="nav-number">1.</span> <span class="nav-text">Bubble Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Insertion-Sort"><span class="nav-number">2.</span> <span class="nav-text">Insertion Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Merge-Sort"><span class="nav-number">3.</span> <span class="nav-text">Merge Sort</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Space-Complexity"><span class="nav-number">3.1.</span> <span class="nav-text">Space Complexity</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Sort"><span class="nav-number">4.</span> <span class="nav-text">Quick Sort</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Summary-of-sorting-algorithms"><span class="nav-number">5.</span> <span class="nav-text">Summary of sorting algorithms</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -412,7 +417,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-count">9</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
