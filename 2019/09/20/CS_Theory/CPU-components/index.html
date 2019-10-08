@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
+  <meta name="description" content="The inner workings of a Central Processing Unit.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Insertion Sort">
-<meta property="og:url" content="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/index.html">
+<meta property="og:title" content="CPU Components">
+<meta property="og:url" content="https://bensonater.github.io/2019/09/20/CS_Theory/CPU-components/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
+<meta property="og:description" content="The inner workings of a Central Processing Unit.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T09:08:03.919Z">
+<meta property="og:updated_time" content="2019-10-08T20:05:16.802Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Insertion Sort">
-<meta name="twitter:description" content="Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates">
-  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/">
+<meta name="twitter:title" content="CPU Components">
+<meta name="twitter:description" content="The inner workings of a Central Processing Unit.">
+  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/CS_Theory/CPU-components/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>Insertion Sort | Return 0</title>
+  <title>CPU Components | Return 0</title>
   
 
 
@@ -207,7 +207,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">10</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">11</span></a>
 
   </li>
   </ul>
@@ -232,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/CPU-components/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -244,7 +244,7 @@
       <meta itemprop="name" content="Return 0">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Insertion Sort
+        <h1 class="post-title" itemprop="name headline">CPU Components
 
           
         </h1>
@@ -260,11 +260,19 @@
                 
               
 
-              <time title="Created: 2019-09-20 11:00:15 / Modified: 10:08:03" itemprop="dateCreated datePublished" datetime="2019-09-20T11:00:15+01:00">2019-09-20</time>
+              <time title="Created: 2019-09-20 11:00:15" itemprop="dateCreated datePublished" datetime="2019-09-20T11:00:15+01:00">2019-09-20</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-08 21:05:16" itemprop="dateModified" datetime="2019-10-08T21:05:16+01:00">2019-10-08</time>
+              </span>
             
           
 
@@ -279,11 +287,30 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+        <p>The inner workings of a Central Processing Unit.</p>
 <a id="more"></a>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">numbers = [3, 2, 1, 5, 36, 7, 13, 21]</span><br><span class="line"></span><br><span class="line">for i in range(1, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    while j &gt; 0 and temp &lt; numbers[j - 1]:</span><br><span class="line">        numbers[j] = numbers[j - 1]</span><br><span class="line">       	j -= 1</span><br><span class="line">   	numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
 
+<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>Performs arithmetic and logical operations on the data. It can add, subtract, multiply and divide on fixed or floating point numbers.</p>
+<h2 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h2><p>Controls and coordinates the activities of the CPU, directing the flow of data between the CPU and other devices. It accepts the next instruction, decodes it into several sequential steps, executes it and stores the resulting data back in memory or registers.</p>
+<h2 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h2><h3 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h3><p>The program counter holds the address of the next instruction to be executed</p>
+<h3 id="ACC"><a href="#ACC" class="headerlink" title="ACC"></a>ACC</h3><p>The accumulator takes place of the general purpose registers.</p>
+<h3 id="MAR"><a href="#MAR" class="headerlink" title="MAR"></a>MAR</h3><p>The memory address register holds the address of the memory location from which data (or an instruction) is to be fetched or to which data is to be written</p>
+<h3 id="MDR"><a href="#MDR" class="headerlink" title="MDR"></a>MDR</h3><p>The memory data register is used to temporarily store the data read from or written to memory. It is also sometimes known as the memory buffer register</p>
+<h3 id="CIR"><a href="#CIR" class="headerlink" title="CIR"></a>CIR</h3><p>The current instruction register holds the current instruction being executed, divided into oprand and opcode.</p>
+<h2 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h2><h3 id="Data-Bus"><a href="#Data-Bus" class="headerlink" title="Data Bus"></a>Data Bus</h3><p>The data bus, typically consisting of 8, 16, 32 or 64 lines, provides a bi-directional path for moving data and instructions between system components</p>
+<h3 id="Address-Bus"><a href="#Address-Bus" class="headerlink" title="Address Bus"></a>Address Bus</h3><p>The address bus transmits the memory addresses so that the data can be retrieved and sent back to the processor. It is one directional.</p>
+<h3 id="Control-Bus"><a href="#Control-Bus" class="headerlink" title="Control Bus"></a>Control Bus</h3><p>The control bus is a bi-directional bus. The data and address buses are shared by all components of the system. Control lines are used to ensure the access and use of the data and address buses by the different components of the system does not lead to conflict</p>
+<p>The purpose of the control bus is to transmit command, timing and specific status information between system components</p>
+<p>Control lines include:</p>
+<ul>
+<li>Bus Request: indicates that a device is requesting the use of the data bus</li>
+<li>Bus Grant: indicates that the CPU has granted access to the data bus</li>
+<li>Memory Write: causes the data on the data bus to be written into the addressed location</li>
+<li>Memory Read: causes data from the addresses location to be placed on the data bus</li>
+<li>Interrupt Request: indicates that a device is requesting access to the CPU</li>
+<li>Clock: used to synchronise operations</li>
+</ul>
 
     </div>
 
@@ -300,18 +327,14 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/20/Programming_and_Algorithms/bubble_sort/" rel="next" title="Bubble Sort">
-                  <i class="fa fa-chevron-left"></i> Bubble Sort
-                </a>
-              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/09/20/CS_Theory/os/" rel="prev" title="Operating System">
-                  Operating System <i class="fa fa-chevron-right"></i>
+                <a href="/2019/09/20/CS_Theory/software-dev/" rel="prev" title="Software Development">
+                  Software Development <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -358,7 +381,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Python-Implementation"><span class="nav-number">1.</span> <span class="nav-text">Python Implementation</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ALU"><span class="nav-number">1.</span> <span class="nav-text">ALU</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Control-Unit"><span class="nav-number">2.</span> <span class="nav-text">Control Unit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Registers"><span class="nav-number">3.</span> <span class="nav-text">Registers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PC"><span class="nav-number">3.1.</span> <span class="nav-text">PC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACC"><span class="nav-number">3.2.</span> <span class="nav-text">ACC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAR"><span class="nav-number">3.3.</span> <span class="nav-text">MAR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDR"><span class="nav-number">3.4.</span> <span class="nav-text">MDR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CIR"><span class="nav-number">3.5.</span> <span class="nav-text">CIR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Buses"><span class="nav-number">4.</span> <span class="nav-text">Buses</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Bus"><span class="nav-number">4.1.</span> <span class="nav-text">Data Bus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Address-Bus"><span class="nav-number">4.2.</span> <span class="nav-text">Address Bus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Bus"><span class="nav-number">4.3.</span> <span class="nav-text">Control Bus</span></a></li></ol></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -374,7 +397,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

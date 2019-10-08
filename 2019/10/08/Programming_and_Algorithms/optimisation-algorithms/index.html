@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="The inner workings of a Central Processing Unit.">
+  <meta name="description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CPU Components">
-<meta property="og:url" content="https://bensonater.github.io/2019/09/20/CS_Theory/CPU_components/index.html">
+<meta property="og:title" content="optimisation algorithms">
+<meta property="og:url" content="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="The inner workings of a Central Processing Unit.">
+<meta property="og:description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T09:10:34.627Z">
+<meta property="og:updated_time" content="2019-10-08T20:18:39.236Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CPU Components">
-<meta name="twitter:description" content="The inner workings of a Central Processing Unit.">
-  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/CS_Theory/CPU_components/">
+<meta name="twitter:title" content="optimisation algorithms">
+<meta name="twitter:description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
+  <link rel="canonical" href="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>CPU Components | Return 0</title>
+  <title>optimisation algorithms | Return 0</title>
   
 
 
@@ -207,7 +207,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">10</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">11</span></a>
 
   </li>
   </ul>
@@ -232,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/CPU_components/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -244,7 +244,7 @@
       <meta itemprop="name" content="Return 0">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">CPU Components
+        <h1 class="post-title" itemprop="name headline">optimisation algorithms
 
           
         </h1>
@@ -260,7 +260,7 @@
                 
               
 
-              <time title="Created: 2019-09-20 11:00:15 / Modified: 10:10:34" itemprop="dateCreated datePublished" datetime="2019-09-20T11:00:15+01:00">2019-09-20</time>
+              <time title="Created: 2019-10-08 21:04:11 / Modified: 21:18:39" itemprop="dateCreated datePublished" datetime="2019-10-08T21:04:11+01:00">2019-10-08</time>
             </span>
           
             
@@ -279,30 +279,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>The inner workings of a Central Processing Unit.</p>
+        <p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
 <a id="more"></a>
 
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other<br>nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for</span><br><span class="line">the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
 
-<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>Performs arithmetic and logical operations on the data. It can add, subtract, multiply and divide on fixed or floating point numbers.</p>
-<h2 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h2><p>Controls and coordinates the activities of the CPU, directing the flow of data between the CPU and other devices. It accepts the next instruction, decodes it into several sequential steps, executes it and stores the resulting data back in memory or registers.</p>
-<h2 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h2><h3 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h3><p>The program counter holds the address of the next instruction to be executed</p>
-<h3 id="ACC"><a href="#ACC" class="headerlink" title="ACC"></a>ACC</h3><p>The accumulator takes place of the general purpose registers.</p>
-<h3 id="MAR"><a href="#MAR" class="headerlink" title="MAR"></a>MAR</h3><p>The memory address register holds the address of the memory location from which data (or an instruction) is to be fetched or to which data is to be written</p>
-<h3 id="MDR"><a href="#MDR" class="headerlink" title="MDR"></a>MDR</h3><p>The memory data register is used to temporarily store the data read from or written to memory. It is also sometimes known as the memory buffer register</p>
-<h3 id="CIR"><a href="#CIR" class="headerlink" title="CIR"></a>CIR</h3><p>The current instruction register holds the current instruction being executed, divided into oprand and opcode.</p>
-<h2 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h2><h3 id="Data-Bus"><a href="#Data-Bus" class="headerlink" title="Data Bus"></a>Data Bus</h3><p>The data bus, typically consisting of 8, 16, 32 or 64 lines, provides a bi-directional path for moving data and instructions between system components</p>
-<h3 id="Address-Bus"><a href="#Address-Bus" class="headerlink" title="Address Bus"></a>Address Bus</h3><p>The address bus transmits the memory addresses so that the data can be retrieved and sent back to the processor. It is one directional.</p>
-<h3 id="Control-Bus"><a href="#Control-Bus" class="headerlink" title="Control Bus"></a>Control Bus</h3><p>The control bus is a bi-directional bus. The data and address buses are shared by all components of the system. Control lines are used to ensure the access and use of the data and address buses by the different components of the system does not lead to conflict</p>
-<p>The purpose of the control bus is to transmit command, timing and specific status information between system components</p>
-<p>Control lines include:</p>
-<ul>
-<li>Bus Request: indicates that a device is requesting the use of the data bus</li>
-<li>Bus Grant: indicates that the CPU has granted access to the data bus</li>
-<li>Memory Write: causes the data on the data bus to be written into the addressed location</li>
-<li>Memory Read: causes data from the addresses location to be placed on the data bus</li>
-<li>Interrupt Request: indicates that a device is requesting access to the CPU</li>
-<li>Clock: used to synchronise operations</li>
-</ul>
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node. </p>
 
     </div>
 
@@ -319,15 +308,15 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
+                <a href="/2019/09/27/CS_Theory/page-rank/" rel="next" title="Page Rank Algorithm">
+                  <i class="fa fa-chevron-left"></i> Page Rank Algorithm
+                </a>
+              
             </div>
 
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/20/CS_Theory/software_dev/" rel="prev" title="Software Development">
-                  Software Development <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -373,7 +362,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ALU"><span class="nav-number">1.</span> <span class="nav-text">ALU</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Control-Unit"><span class="nav-number">2.</span> <span class="nav-text">Control Unit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Registers"><span class="nav-number">3.</span> <span class="nav-text">Registers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#PC"><span class="nav-number">3.1.</span> <span class="nav-text">PC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACC"><span class="nav-number">3.2.</span> <span class="nav-text">ACC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MAR"><span class="nav-number">3.3.</span> <span class="nav-text">MAR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MDR"><span class="nav-number">3.4.</span> <span class="nav-text">MDR</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CIR"><span class="nav-number">3.5.</span> <span class="nav-text">CIR</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Buses"><span class="nav-number">4.</span> <span class="nav-text">Buses</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Data-Bus"><span class="nav-number">4.1.</span> <span class="nav-text">Data Bus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Address-Bus"><span class="nav-number">4.2.</span> <span class="nav-text">Address Bus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Control-Bus"><span class="nav-number">4.3.</span> <span class="nav-text">Control Bus</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra’s-shortest-path-algorithm"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra’s shortest path algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudocode-Implementation"><span class="nav-number">2.</span> <span class="nav-text">Pseudocode Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-A-algorithm"><span class="nav-number">3.</span> <span class="nav-text">The A* algorithm</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -389,7 +378,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
