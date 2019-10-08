@@ -10,14 +10,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta name="generator" content="Hexo 3.9.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
-  <meta http-equiv="Cache-Control" content="no-transform">
-  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.1">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.4.1" color="#222">
 
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
+<link rel="stylesheet" href="/css/main.css?v=7.4.1">
 
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
@@ -27,12 +25,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Pisces',
-    version: '7.4.0',
+    scheme: 'Muse',
+    version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -117,7 +115,7 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+<body itemscope itemtype="http://schema.org/WebPage">
   <div class="container use-motion">
     <div class="headband"></div>
 
@@ -137,11 +135,11 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
 </div>
 
@@ -156,17 +154,8 @@
         <li class="menu-item menu-item-home">
       
     
-      
-      
-        
-      
-        
-      
-        
-      
-    
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
 
   </li>
       
@@ -176,63 +165,111 @@
         <li class="menu-item menu-item-archives">
       
     
-      
-      
-        
-          
-        
-      
-        
-      
-        
-      
-    
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives<span class="badge">9</span></a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-about">
-      
-    
-      
-      
-        
-      
-        
-      
-        
-      
-    
-
-    <a href="/about/me.html" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
 
   </li>
   </ul>
+
+    
 
 </nav>
 </div>
     </header>
 
     
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-            
-
           <div id="content" class="content">
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
+
+  <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/27/CS_Theory/page_rank/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson Zhou">
+      <meta itemprop="description" content="Watch me run this npm command that'll send us deeper into dependency hell">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Return 0">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/27/CS_Theory/page_rank/" class="post-title-link" itemprop="url">Page Rank Algorithm</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-09-27 09:26:52 / Modified: 09:52:28" itemprop="dateCreated datePublished" datetime="2019-09-27T09:26:52+01:00">2019-09-27</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>We assume page A has pages T1…Tn which point to it (i.e., are citations). The parameter d is a damping factor which can be set between 0 and 1. We usually set d to 0.85. There are more details about d in the next section. Also C(A) is defined as the number of links going out of page A. The PageRank of a page A is given as follows:</p>
+<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages’ PageRanks will be one.</p>
+<p>PageRank or PR(A) can be calculated using a simple iterative algorithm, and corresponds to the principal eigenvector of the normalized link matrix of the web.</p>
+<p>PR(Tn) - Each page has a notion of its own self-importance. That’s “PR(T1)” for the first page in the web all the way up to “PR(Tn)” for the last page<br>C(Tn) - Each page spreads its vote out evenly amongst all of it’s outgoing links. The count, or number, of outgoing links for page 1 is “C(T1)”, “C(Tn)” for page n, and so on for all pages.<br>PR(Tn)/C(Tn) - so if our page (page A) has a backlink from page “n” the share of the vote page A will get is “PR(Tn)/C(Tn)”<br>d(… - All these fractions of votes are added together but, to stop the other pages having too much influence, this total vote is “damped down” by multiplying it by 0.85 (the factor “d”)<br>(1 - d) - The (1 – d) bit at the beginning is a bit of probability math magic so the “sum of all web pages’ PageRanks will be one”: it adds in the bit lost by the d(…. It also means that if a page has no links to it (no backlinks) even then it will still get a small PR of 0.15 (i.e. 1 – 0.85). (Aside: the Google paper says “the sum of all pages” but they mean the “the normalised sum” – otherwise known as “the average” to you and me.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
   
   
   
-  <div class="post-block home">
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/21/Programming_and_Algorithms/quick_sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -284,7 +321,7 @@
           <p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/21/Programming_and_Algorithms/quick_sort/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -302,18 +339,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/21/Programming_and_Algorithms/merge_sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -365,7 +400,7 @@
           <p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/21/Programming_and_Algorithms/merge_sort/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -383,18 +418,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/time_complexities/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -454,7 +487,7 @@
           <p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/Programming_and_Algorithms/time_complexities/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -472,18 +505,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/processor_performance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -531,7 +562,7 @@
           <p>What makes some processor faster than others?</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/CS_Theory/processor_performance/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -549,18 +580,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/os/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -612,7 +641,7 @@
           <p>An operating system is a program or a set of programs that manages the operations of the computer for the user. It acts as a bridge between the user and the computer’s hardware.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/CS_Theory/os/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -630,18 +659,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/insertion_sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -693,7 +720,7 @@
           <p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/Programming_and_Algorithms/insertion_sort/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -711,18 +738,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/Programming_and_Algorithms/bubble_sort/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -774,7 +799,7 @@
           <p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/Programming_and_Algorithms/bubble_sort/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -792,18 +817,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/software_dev/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -855,7 +878,7 @@
           <p>In this post I will make a summary for the different stages in the making of software. I’ll also compare some of the common methods used.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/CS_Theory/software_dev/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -873,18 +896,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
-        <article itemscope itemtype="http://schema.org/Article">
+        
   
   
-  
-  <div class="post-block home">
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
     <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/CPU_components/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -936,7 +957,7 @@
           <p>The inner workings of a Central Processing Unit.</p>
           <!--noindex-->
           
-            <div class="post-button text-center">
+            <div class="post-button">
               <a class="btn" href="/2019/09/20/CS_Theory/CPU_components/#more" rel="contents">
                 Read more &raquo;
               </a>
@@ -954,16 +975,16 @@
           <div class="post-eof"></div>
         
       </footer>
-  </div>
-  
-  
-  
   </article>
+  
+  
+  
 
     
   </div>
 
   
+
 
 
           </div>
@@ -972,12 +993,10 @@
         </div>
           
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
   </div>
 
   <aside class="sidebar">
@@ -1002,26 +1021,23 @@
   <p class="site-author-name" itemprop="name">Benson Zhou</p>
   <div class="site-description" itemprop="description">Watch me run this npm command that'll send us deeper into dependency hell</div>
 </div>
-  <nav class="site-state motion-element">
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
       <div class="site-state-item site-state-posts">
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">9</span>
+          <span class="site-state-item-count">10</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
     
   </nav>
+</div>
 
 
 
       </div>
-        <div class="back-to-top motion-element">
-          <i class="fa fa-arrow-up"></i>
-          <span>0%</span>
-        </div>
-      
 
     </div>
   </aside>
@@ -1039,7 +1055,9 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Benson Zhou</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.1</div>
 
         
 
@@ -1060,14 +1078,12 @@
   </div>
 
   
-
-
   <script src="/lib/anime.min.js?v=3.1.0"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/pisces.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
+<script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
+<script src="/js/schemes/muse.js?v=7.4.1"></script>
+<script src="/js/next-boot.js?v=7.4.1"></script>
 
 
 
