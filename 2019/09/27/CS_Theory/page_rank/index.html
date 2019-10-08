@@ -25,12 +25,12 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '7.4.1',
     exturl: false,
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
     bookmark: {"enable":false,"color":"#222","save":"auto"},
     fancybox: false,
     mediumzoom: false,
@@ -55,17 +55,17 @@
   };
 </script>
 
-  <meta name="description" content="We assume page A has pages T1…Tn which point to it (i.e., are citations). The parameter d is a damping factor which can be set between 0 and 1. We usually set d to 0.85. There are more details about d">
+  <meta name="description" content="Google’s Page Rank algorithm and how to calculate it">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Page Rank Algorithm">
 <meta property="og:url" content="https://bensonater.github.io/2019/09/27/CS_Theory/page_rank/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="We assume page A has pages T1…Tn which point to it (i.e., are citations). The parameter d is a damping factor which can be set between 0 and 1. We usually set d to 0.85. There are more details about d">
+<meta property="og:description" content="Google’s Page Rank algorithm and how to calculate it">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-27T08:52:28.510Z">
+<meta property="og:updated_time" content="2019-10-08T12:57:04.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Page Rank Algorithm">
-<meta name="twitter:description" content="We assume page A has pages T1…Tn which point to it (i.e., are citations). The parameter d is a damping factor which can be set between 0 and 1. We usually set d to 0.85. There are more details about d">
+<meta name="twitter:description" content="Google’s Page Rank algorithm and how to calculate it">
   <link rel="canonical" href="https://bensonater.github.io/2019/09/27/CS_Theory/page_rank/">
 
 
@@ -155,8 +155,37 @@
         <li class="menu-item menu-item-home">
       
     
+      
+      
+        
+      
+        
+      
+        
+      
+    
 
     <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+      
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <a href="/about/me.html" rel="section"><i class="fa fa-fw fa-user"></i>About</a>
 
   </li>
       
@@ -166,28 +195,35 @@
         <li class="menu-item menu-item-archives">
       
     
+      
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives</a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">10</span></a>
 
   </li>
   </ul>
-
-    
 
 </nav>
 </div>
     </header>
 
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
 
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+            
+
           <div id="content" class="content">
             
 
@@ -224,11 +260,19 @@
                 
               
 
-              <time title="Created: 2019-09-27 09:26:52 / Modified: 09:52:28" itemprop="dateCreated datePublished" datetime="2019-09-27T09:26:52+01:00">2019-09-27</time>
+              <time title="Created: 2019-09-27 09:26:52" itemprop="dateCreated datePublished" datetime="2019-09-27T09:26:52+01:00">2019-09-27</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-08 13:57:04" itemprop="dateModified" datetime="2019-10-08T13:57:04+01:00">2019-10-08</time>
+              </span>
             
           
 
@@ -243,11 +287,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>We assume page A has pages T1…Tn which point to it (i.e., are citations). The parameter d is a damping factor which can be set between 0 and 1. We usually set d to 0.85. There are more details about d in the next section. Also C(A) is defined as the number of links going out of page A. The PageRank of a page A is given as follows:</p>
+        <p>Google’s Page Rank algorithm and how to calculate it</p>
+<a id="more"></a>
+
+<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
+<p>The PageRank algorithm itself is defined as:</p>
 <p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
-<p>Note that the PageRanks form a probability distribution over web pages, so the sum of all web pages’ PageRanks will be one.</p>
-<p>PageRank or PR(A) can be calculated using a simple iterative algorithm, and corresponds to the principal eigenvector of the normalized link matrix of the web.</p>
-<p>PR(Tn) - Each page has a notion of its own self-importance. That’s “PR(T1)” for the first page in the web all the way up to “PR(Tn)” for the last page<br>C(Tn) - Each page spreads its vote out evenly amongst all of it’s outgoing links. The count, or number, of outgoing links for page 1 is “C(T1)”, “C(Tn)” for page n, and so on for all pages.<br>PR(Tn)/C(Tn) - so if our page (page A) has a backlink from page “n” the share of the vote page A will get is “PR(Tn)/C(Tn)”<br>d(… - All these fractions of votes are added together but, to stop the other pages having too much influence, this total vote is “damped down” by multiplying it by 0.85 (the factor “d”)<br>(1 - d) - The (1 – d) bit at the beginning is a bit of probability math magic so the “sum of all web pages’ PageRanks will be one”: it adds in the bit lost by the d(…. It also means that if a page has no links to it (no backlinks) even then it will still get a small PR of 0.15 (i.e. 1 – 0.85). (Aside: the Google paper says “the sum of all pages” but they mean the “the normalised sum” – otherwise known as “the average” to you and me.</p>
+<p>where:</p>
+<ul>
+<li>PR(A) is the PageRank of page A</li>
+<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
+<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
+</ul>
+<p>The PageRank of a page is constantly being recalculated and updated.</p>
 
     </div>
 
@@ -343,6 +396,11 @@
 
 
       </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+      
 
     </div>
   </aside>
@@ -360,9 +418,7 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Benson Zhou</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.1</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a></div>
 
         
 
@@ -387,7 +443,7 @@
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 <script src="/js/utils.js?v=7.4.1"></script><script src="/js/motion.js?v=7.4.1"></script>
-<script src="/js/schemes/muse.js?v=7.4.1"></script>
+<script src="/js/schemes/pisces.js?v=7.4.1"></script>
 <script src="/js/next-boot.js?v=7.4.1"></script>
 
 
