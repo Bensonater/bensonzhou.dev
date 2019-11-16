@@ -206,7 +206,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">13</span></a>
 
   </li>
   </ul>
@@ -227,6 +227,157 @@
             
 
   <div class="posts-expand">
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/11/16/CS_Theory/database/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson Zhou">
+      <meta itemprop="description" content="Watch me run this npm command that'll send us deeper into dependency hell">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Return 0">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/11/16/CS_Theory/database/" class="post-title-link" itemprop="url">Database</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-16 10:33:05 / Modified: 10:33:24" itemprop="dateCreated datePublished" datetime="2019-11-16T10:33:05+00:00">2019-11-16</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>In a relational database, a separate table is created for each entity identified in the system. Where a<br>relationship exists between entities, an extra field called a foreign key links the two tables.<br>Foreign key<br>A foreign key is an attribute that creates a join between two tables. It is the attribute that is common to<br>both tables, and the primary key in one table is the foreign key in the table to which it is linked.<br>Example: In the one-to-many relationship between Dentist and Patient, the entity on the ‘many’ side of<br>the relationship will have DentistID as an extra attribute. This is the foreign key.<br>Dentist<br>Patient<br>DentistID*<br>Title<br>FirstName<br>Surname<br>Qualification<br>PatientID*<br>Title<br>FirstName<br>Surname<br>Address<br>Telephone<br>DentistID<br>Note that the primary key is indicated by an asterisk, and the foreign key is shown in italics.<br>4-16<br>5<br>Linking tables in a many-to-many relationship<br>When there is a many-to-many relationship between two entities, tables cannot be directly linked in<br>this way. For example, consider the relationship between Student and Course. A student takes many<br>courses, and the same course is taken by many students.<br>Student<br>takes<br>Course<br>Many-to-many<br>In this case, an extra table is needed to link the Student and Course tables. We could call this<br>StudentCourse, or Enrolment, for example.<br>Student<br>Enrolment<br>The three tables will now have attributes something like those shown below:<br>Student (StudentID, Name, Address)<br>Enrolment (StudentID, CourseID)<br>Course (CourseID, Subject, Level)<br>Composite key<br>In this data model, the table linking Student and Course has two foreign keys, each linking to one of<br>the two main tables. The two foreign keys also act as the primary key of this table. A primary key which<br>consists of more than one attribute is called a composite primary key.<br>Cours</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/11/11/CS_Theory/problem-solving/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Benson Zhou">
+      <meta itemprop="description" content="Watch me run this npm command that'll send us deeper into dependency hell">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Return 0">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/11/11/CS_Theory/problem-solving/" class="post-title-link" itemprop="url">Problem Solving</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-11-11 09:52:11" itemprop="dateCreated datePublished" datetime="2019-11-11T09:52:11+00:00">2019-11-11</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-11-13 10:35:47" itemprop="dateModified" datetime="2019-11-13T10:35:47+00:00">2019-11-13</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </article>
+  
+  
+  
+
+    
         
   
   
@@ -260,11 +411,19 @@
                 
               
 
-              <time title="Created: 2019-10-08 21:04:11 / Modified: 21:23:29" itemprop="dateCreated datePublished" datetime="2019-10-08T21:04:11+01:00">2019-10-08</time>
+              <time title="Created: 2019-10-08 21:04:11" itemprop="dateCreated datePublished" datetime="2019-10-08T21:04:11+01:00">2019-10-08</time>
             </span>
           
             
 
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-10-23 00:19:05" itemprop="dateModified" datetime="2019-10-23T00:19:05+01:00">2019-10-23</time>
+              </span>
             
           
 
@@ -658,7 +817,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/processor_performance/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/processor-performance/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -672,7 +831,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/09/20/CS_Theory/processor_performance/" class="post-title-link" itemprop="url">Processor Performance</a>
+            <a href="/2019/09/20/CS_Theory/processor-performance/" class="post-title-link" itemprop="url">Processor Performance</a>
           
         </h1>
 
@@ -690,6 +849,18 @@
               <time title="Created: 2019-09-20 15:07:38" itemprop="dateCreated datePublished" datetime="2019-09-20T15:07:38+01:00">2019-09-20</time>
             </span>
           
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-11-13 10:22:40" itemprop="dateModified" datetime="2019-11-13T10:22:40+00:00">2019-11-13</time>
+              </span>
+            
+          
 
           
 
@@ -706,7 +877,7 @@
           <!--noindex-->
           
             <div class="post-button">
-              <a class="btn" href="/2019/09/20/CS_Theory/processor_performance/#more" rel="contents">
+              <a class="btn" href="/2019/09/20/CS_Theory/processor-performance/#more" rel="contents">
                 Read more &raquo;
               </a>
             </div>
@@ -1202,7 +1373,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>

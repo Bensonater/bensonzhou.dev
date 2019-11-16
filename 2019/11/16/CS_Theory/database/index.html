@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
+  <meta name="description" content="In a relational database, a separate table is created for each entity identified in the system. Where arelationship exists between entities, an extra field called a foreign key links the two tables.Fo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Optimisation Algorithms">
-<meta property="og:url" content="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/index.html">
+<meta property="og:title" content="Database">
+<meta property="og:url" content="https://bensonater.github.io/2019/11/16/CS_Theory/database/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
+<meta property="og:description" content="In a relational database, a separate table is created for each entity identified in the system. Where arelationship exists between entities, an extra field called a foreign key links the two tables.Fo">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-22T23:19:05.814Z">
+<meta property="og:updated_time" content="2019-11-16T10:33:24.859Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Optimisation Algorithms">
-<meta name="twitter:description" content="We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-relate">
-  <link rel="canonical" href="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/">
+<meta name="twitter:title" content="Database">
+<meta name="twitter:description" content="In a relational database, a separate table is created for each entity identified in the system. Where arelationship exists between entities, an extra field called a foreign key links the two tables.Fo">
+  <link rel="canonical" href="https://bensonater.github.io/2019/11/16/CS_Theory/database/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>Optimisation Algorithms | Return 0</title>
+  <title>Database | Return 0</title>
   
 
 
@@ -232,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/11/16/CS_Theory/database/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -244,7 +244,7 @@
       <meta itemprop="name" content="Return 0">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Optimisation Algorithms
+        <h1 class="post-title" itemprop="name headline">Database
 
           
         </h1>
@@ -260,19 +260,11 @@
                 
               
 
-              <time title="Created: 2019-10-08 21:04:11" itemprop="dateCreated datePublished" datetime="2019-10-08T21:04:11+01:00">2019-10-08</time>
+              <time title="Created: 2019-11-16 10:33:05 / Modified: 10:33:24" itemprop="dateCreated datePublished" datetime="2019-11-16T10:33:05+00:00">2019-11-16</time>
             </span>
           
             
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-23 00:19:05" itemprop="dateModified" datetime="2019-10-23T00:19:05+01:00">2019-10-23</time>
-              </span>
             
           
 
@@ -287,19 +279,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
-<a id="more"></a>
-
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node. </p>
+        <p>In a relational database, a separate table is created for each entity identified in the system. Where a<br>relationship exists between entities, an extra field called a foreign key links the two tables.<br>Foreign key<br>A foreign key is an attribute that creates a join between two tables. It is the attribute that is common to<br>both tables, and the primary key in one table is the foreign key in the table to which it is linked.<br>Example: In the one-to-many relationship between Dentist and Patient, the entity on the ‘many’ side of<br>the relationship will have DentistID as an extra attribute. This is the foreign key.<br>Dentist<br>Patient<br>DentistID*<br>Title<br>FirstName<br>Surname<br>Qualification<br>PatientID*<br>Title<br>FirstName<br>Surname<br>Address<br>Telephone<br>DentistID<br>Note that the primary key is indicated by an asterisk, and the foreign key is shown in italics.<br>4-16<br>5<br>Linking tables in a many-to-many relationship<br>When there is a many-to-many relationship between two entities, tables cannot be directly linked in<br>this way. For example, consider the relationship between Student and Course. A student takes many<br>courses, and the same course is taken by many students.<br>Student<br>takes<br>Course<br>Many-to-many<br>In this case, an extra table is needed to link the Student and Course tables. We could call this<br>StudentCourse, or Enrolment, for example.<br>Student<br>Enrolment<br>The three tables will now have attributes something like those shown below:<br>Student (StudentID, Name, Address)<br>Enrolment (StudentID, CourseID)<br>Course (CourseID, Subject, Level)<br>Composite key<br>In this data model, the table linking Student and Course has two foreign keys, each linking to one of<br>the two main tables. The two foreign keys also act as the primary key of this table. A primary key which<br>consists of more than one attribute is called a composite primary key.<br>Cours</p>
 
     </div>
 
@@ -316,8 +296,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/27/CS_Theory/page-rank/" rel="next" title="Page Rank Algorithm">
-                  <i class="fa fa-chevron-left"></i> Page Rank Algorithm
+                <a href="/2019/11/11/CS_Theory/problem-solving/" rel="next" title="Problem Solving">
+                  <i class="fa fa-chevron-left"></i> Problem Solving
                 </a>
               
             </div>
@@ -325,10 +305,6 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/11/11/CS_Theory/problem-solving/" rel="prev" title="Problem Solving">
-                  Problem Solving <i class="fa fa-chevron-right"></i>
-                </a>
               
             </div>
           </div>
@@ -374,8 +350,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dijkstra’s-shortest-path-algorithm"><span class="nav-number">1.</span> <span class="nav-text">Dijkstra’s shortest path algorithm</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pseudocode-Implementation"><span class="nav-number">2.</span> <span class="nav-text">Pseudocode Implementation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-A-algorithm"><span class="nav-number">3.</span> <span class="nav-text">The A* algorithm</span></a></li></ol></div>
-        
       </div>
       <!--/noindex-->
 

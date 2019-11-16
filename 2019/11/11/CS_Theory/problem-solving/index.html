@@ -55,18 +55,18 @@
   };
 </script>
 
-  <meta name="description" content="What makes some processor faster than others?">
+  <meta name="description" content="BacktrackingBacktracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Processor Performance">
-<meta property="og:url" content="https://bensonater.github.io/2019/09/20/CS_Theory/processor_performance/index.html">
+<meta property="og:title" content="Problem Solving">
+<meta property="og:url" content="https://bensonater.github.io/2019/11/11/CS_Theory/problem-solving/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="What makes some processor faster than others?">
+<meta property="og:description" content="BacktrackingBacktracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-20T14:07:38.017Z">
+<meta property="og:updated_time" content="2019-11-13T10:35:47.693Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Processor Performance">
-<meta name="twitter:description" content="What makes some processor faster than others?">
-  <link rel="canonical" href="https://bensonater.github.io/2019/09/20/CS_Theory/processor_performance/">
+<meta name="twitter:title" content="Problem Solving">
+<meta name="twitter:description" content="BacktrackingBacktracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze">
+  <link rel="canonical" href="https://bensonater.github.io/2019/11/11/CS_Theory/problem-solving/">
 
 
 <script id="page-configurations">
@@ -80,7 +80,7 @@
   };
 </script>
 
-  <title>Processor Performance | Return 0</title>
+  <title>Problem Solving | Return 0</title>
   
 
 
@@ -207,7 +207,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">11</span></a>
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>Archives<span class="badge">13</span></a>
 
   </li>
   </ul>
@@ -232,7 +232,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/20/CS_Theory/processor_performance/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/11/11/CS_Theory/problem-solving/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Benson Zhou">
@@ -244,7 +244,7 @@
       <meta itemprop="name" content="Return 0">
     </span>
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Processor Performance
+        <h1 class="post-title" itemprop="name headline">Problem Solving
 
           
         </h1>
@@ -260,8 +260,20 @@
                 
               
 
-              <time title="Created: 2019-09-20 15:07:38" itemprop="dateCreated datePublished" datetime="2019-09-20T15:07:38+01:00">2019-09-20</time>
+              <time title="Created: 2019-11-11 09:52:11" itemprop="dateCreated datePublished" datetime="2019-11-11T09:52:11+00:00">2019-11-11</time>
             </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-11-13 10:35:47" itemprop="dateModified" datetime="2019-11-13T10:35:47+00:00">2019-11-13</time>
+              </span>
+            
           
 
           
@@ -275,26 +287,8 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>What makes some processor faster than others?</p>
-<a id="more"></a>
-
-
-<p>Factors affecting processor performance</p>
-<ul>
-<li>Clock speed</li>
-<li>The number of cores</li>
-<li>The amount and type of cache memory</li>
-</ul>
-<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
-<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
-<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
-<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
-<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
-<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
-<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
-<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
-<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
-<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+        <h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 
     </div>
 
@@ -311,8 +305,8 @@
           <div class="post-nav">
             <div class="post-nav-next post-nav-item">
               
-                <a href="/2019/09/20/CS_Theory/os/" rel="next" title="Operating System">
-                  <i class="fa fa-chevron-left"></i> Operating System
+                <a href="/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/" rel="next" title="Optimisation Algorithms">
+                  <i class="fa fa-chevron-left"></i> Optimisation Algorithms
                 </a>
               
             </div>
@@ -321,8 +315,8 @@
 
             <div class="post-nav-prev post-nav-item">
               
-                <a href="/2019/09/20/Programming_and_Algorithms/time-complexities/" rel="prev" title="Time Complexities">
-                  Time Complexities <i class="fa fa-chevron-right"></i>
+                <a href="/2019/11/16/CS_Theory/database/" rel="prev" title="Database">
+                  Database <i class="fa fa-chevron-right"></i>
                 </a>
               
             </div>
@@ -369,7 +363,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Clock-speed"><span class="nav-number">1.</span> <span class="nav-text">Clock speed</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Number-of-cores"><span class="nav-number">2.</span> <span class="nav-text">Number of cores</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Cache-memory"><span class="nav-number">3.</span> <span class="nav-text">Cache memory</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Pipelining"><span class="nav-number">4.</span> <span class="nav-text">Pipelining</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Address-bus"><span class="nav-number">5.</span> <span class="nav-text">Address bus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Data-bus"><span class="nav-number">6.</span> <span class="nav-text">Data bus</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Words-and-word-size-in-relation-to-assembly-language"><span class="nav-number">7.</span> <span class="nav-text">Words and word size in relation to assembly language</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Backtracking"><span class="nav-number">1.</span> <span class="nav-text">Backtracking</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Visualisation"><span class="nav-number">2.</span> <span class="nav-text">Visualisation</span></a></li></ol></div>
         
       </div>
       <!--/noindex-->
@@ -385,7 +379,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
