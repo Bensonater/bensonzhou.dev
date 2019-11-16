@@ -197,7 +197,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2019-11-16 10:33:05 / Modified: 10:33:24" itemprop="dateCreated datePublished" datetime="2019-11-16T10:33:05+00:00">2019-11-16</time>
+              <time title="Created: 2019-11-16 10:33:05 / Modified: 11:02:19" itemprop="dateCreated datePublished" datetime="2019-11-16T10:33:05+00:00">2019-11-16</time>
             </span>
 
           
@@ -211,8 +211,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>In a relational database, a separate table is created for each entity identified in the system. Where a<br>relationship exists between entities, an extra field called a foreign key links the two tables.<br>Foreign key<br>A foreign key is an attribute that creates a join between two tables. It is the attribute that is common to<br>both tables, and the primary key in one table is the foreign key in the table to which it is linked.<br>Example: In the one-to-many relationship between Dentist and Patient, the entity on the ‘many’ side of<br>the relationship will have DentistID as an extra attribute. This is the foreign key.<br>Dentist<br>Patient<br>DentistID*<br>Title<br>FirstName<br>Surname<br>Qualification<br>PatientID*<br>Title<br>FirstName<br>Surname<br>Address<br>Telephone<br>DentistID<br>Note that the primary key is indicated by an asterisk, and the foreign key is shown in italics.<br>4-16<br>5<br>Linking tables in a many-to-many relationship<br>When there is a many-to-many relationship between two entities, tables cannot be directly linked in<br>this way. For example, consider the relationship between Student and Course. A student takes many<br>courses, and the same course is taken by many students.<br>Student<br>takes<br>Course<br>Many-to-many<br>In this case, an extra table is needed to link the Student and Course tables. We could call this<br>StudentCourse, or Enrolment, for example.<br>Student<br>Enrolment<br>The three tables will now have attributes something like those shown below:<br>Student (StudentID, Name, Address)<br>Enrolment (StudentID, CourseID)<br>Course (CourseID, Subject, Level)<br>Composite key<br>In this data model, the table linking Student and Course has two foreign keys, each linking to one of<br>the two main tables. The two foreign keys also act as the primary key of this table. A primary key which<br>consists of more than one attribute is called a composite primary key.<br>Cours</p>
-
+          <p>Relational database, normalisation and more</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2019/11/16/CS_Theory/database/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -262,7 +269,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-11-13 10:35:47" itemprop="dateModified" datetime="2019-11-13T10:35:47+00:00">2019-11-13</time>
+                <time title="Modified: 2019-11-16 10:57:49" itemprop="dateModified" datetime="2019-11-16T10:57:49+00:00">2019-11-16</time>
               </span>
 
           
