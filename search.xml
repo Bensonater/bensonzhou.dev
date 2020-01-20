@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Database</title>
+    <url>/2019/11/16/CS_Theory/database/</url>
+    <content><![CDATA[<p>Relational database, normalisation and more</p>
+<a id="more"></a>
+
+<h2 id="Relational-Database"><a href="#Relational-Database" class="headerlink" title="Relational Database"></a>Relational Database</h2><p>In a relational database, a separate table is created for each entity identified in the system. Where a relationship exists between entities, an extra field called a foreign key links the two tables.</p>
+<h3 id="Foreign-Key"><a href="#Foreign-Key" class="headerlink" title="Foreign Key"></a>Foreign Key</h3><p>A foreign key is an attribute that creates a join between two tables. It is the attribute that is common to both tables, and the primary key in one table is the foreign key in the table to which it is linked.</p>
+<h3 id="Composite-Key"><a href="#Composite-Key" class="headerlink" title="Composite Key"></a>Composite Key</h3><p>In this data model, the table linking Student and Course has two foreign keys, each linking to one of the two main tables. The two foreign keys also act as the primary key of this table. A primary key which consists of more than one attribute is called a composite primary key.</p>
+<h2 id="Relational-Database-Design"><a href="#Relational-Database-Design" class="headerlink" title="Relational Database Design"></a>Relational Database Design</h2><p>In a relational database, data is held in tables (also called relations) and the tables are linked by means of common attributes. A relational database is a collection of tables in which relationships are modelled by shared attributes. Conceptually then, one row of a table holds one record. Each column in the table represents one attribute.</p>
+<p>An example of a table would be: Book (<strong>BookID</strong>, DeweyCode, Title, Author, DatePublished)<br>Note that:</p>
+<ul>
+<li>The entity name is shown outside the brackets</li>
+<li>The attributes are listed inside the brackets</li>
+<li>The primary key is in bold<br>The primary key is composed of one or more attributes that will uniquely identify a particular record in the table. </li>
+</ul>
+<h3 id="Indexing"><a href="#Indexing" class="headerlink" title="Indexing"></a>Indexing</h3><p>In order that a record with a particular primary key can be quickly located in a database, an index of primary keys will be automatically maintained by the database software, giving the position of each record according to its primary key.</p>
+<p>One or more secondary indexes may be defined when the database is created, for any attribute that is often used as a search criterion. This would speed up searches on either of these fields, which would otherwise have to be searched sequentially.</p>
+<h3 id="Linking-Database-Tables"><a href="#Linking-Database-Tables" class="headerlink" title="Linking Database Tables"></a>Linking Database Tables</h3><p>Tables may be linked through the use of a common attribute. This attribute must be a primary key of one of the tables, and is known as a foreign key in the second table.</p>
+<h2 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h2><p>Normalisation is a process used to come up with the best possible design for a relational database. Tables should be organised in such a way that:</p>
+<ul>
+<li>No data is unnecessarily duplicated (i.e. the same data item held in more than one table)</li>
+<li>Data is consistent throughout the database (e.g. a customer is not recorded as having different addresses in different tables of the database). Consistency should be    an automatic consequence of not holding any duplicated data. This means that anomalies will not arise when data is inserted, amended or deleted.</li>
+<li>The structure of each table is flexible enough to allow you to enter as many or as few items (for example, components making up a product) as required</li>
+<li>The structure should enable a user to make all kinds of complex queries relating data from different tables</li>
+</ul>
+<p>There are three basic stages of normalisation known as first, second and third normal form.</p>
+<h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><p>A table is in first normal form (1NF) if it contains no repeating attribute or groups of attributes.</p>
+<h3 id="Second-Normal-Form-Partial-Key-Dependence-Test"><a href="#Second-Normal-Form-Partial-Key-Dependence-Test" class="headerlink" title="Second Normal Form - Partial Key Dependence Test"></a>Second Normal Form - Partial Key Dependence Test</h3><p>A table is in second normal form (2NF) if it is in first normal form and contains no partial dependencies. A partial dependency would mean that one or more of the attributes depends on only part of the primary key, which can only occur if the primary key is a composite key.</p>
+<h3 id="Third-Normal-Form-Non-Key-Dependence-Test"><a href="#Third-Normal-Form-Non-Key-Dependence-Test" class="headerlink" title="Third Normal Form - Non-Key Dependence Test"></a>Third Normal Form - Non-Key Dependence Test</h3><p>A table is in third normal form (3NF) if it is in second normal form and contains no ‘non-key dependencies’. A non-key dependency is one where the value of an attribute is determined by the value of another attribute which is not part of the key.<br>3NF means that:<br>All attributes are dependent on the key, the whole key, and nothing but the key.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/CS_Theory/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<a id="more"></a>
+
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/Programming_and_Algorithms/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+<a id="more"></a>
+
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Page Rank Algorithm</title>
+    <url>/2019/09/27/CS_Theory/page-rank/</url>
+    <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
+<a id="more"></a>
+
+<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
+<p>The PageRank algorithm itself is defined as:</p>
+<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>where:</p>
+<ul>
+<li>PR(A) is the PageRank of page A</li>
+<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
+<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
+</ul>
+<p>The PageRank of a page is constantly being recalculated and updated.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/Programming_and_Algorithms/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<a id="more"></a>
+
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def partition(a_list, start, end):</span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + 1</span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = False</span><br><span class="line"></span><br><span class="line">    while not finished:</span><br><span class="line">        while left_mark &lt;= right_mark and a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += 1</span><br><span class="line">        while a_list[right_mark] &gt;= pivot and right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= 1</span><br><span class="line">        if right_mark &lt; left_mark:</span><br><span class="line">            finished = True</span><br><span class="line">        else:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    return right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">def quick_sort(a_list, start, end):</span><br><span class="line">    if start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - 1)</span><br><span class="line">        quick_sort(a_list, split + 1, end)</span><br><span class="line">    return a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [8, 5, 3, 4, 2, 11, 7]</span><br><span class="line">sorted_a = quick_sort(a, 0, len(a)-1)</span><br><span class="line">print(sorted_a)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Merge Sort</title>
+    <url>/2019/09/21/Programming_and_Algorithms/merge-sort/</url>
+    <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<a id="more"></a>
+
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">def merge_sort(merge_list):</span><br><span class="line">    if len(merge_list) &gt; 1:</span><br><span class="line">        mid = len(merge_list) // 2</span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = 0, 0, 0</span><br><span class="line"></span><br><span class="line">        while i &lt; len(lefthalf) and j &lt; len(righthalf):</span><br><span class="line">            if lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += 1</span><br><span class="line">            else:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += 1</span><br><span class="line">            k += 1</span><br><span class="line">        while i &lt; len(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += 1</span><br><span class="line">            k += 1</span><br><span class="line">            </span><br><span class="line">        while j &lt; len(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += 1</span><br><span class="line">            k += 1</span><br><span class="line"></span><br><span class="line">a = [5, 3, 2, 7, 9, 1, 4, 8]</span><br><span class="line">merge_sort(a)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Time Complexities</title>
+    <url>/2019/09/20/Programming_and_Algorithms/time-complexities/</url>
+    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
+<a id="more"></a>
+
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
+<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
+<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Processor Performance</title>
+    <url>/2019/09/20/CS_Theory/processor-performance/</url>
+    <content><![CDATA[<p>What makes some processor faster than others?</p>
+<a id="more"></a>
+
+
+<p>Factors affecting processor performance</p>
+<ul>
+<li>Clock speed</li>
+<li>The number of cores</li>
+<li>The amount and type of cache memory</li>
+</ul>
+<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
+<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
+<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
+<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
+<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
+<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
+<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
+<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
+<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
+<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Operating System</title>
+    <url>/2019/09/20/CS_Theory/os/</url>
+    <content><![CDATA[<p>An operating system is a program or a set of programs that manages the operations of the computer for the user. It acts as a bridge between the user and the computer’s hardware.</p>
+<a id="more"></a>
+
+<p>The functions of an OS are:</p>
+<ul>
+<li>Memory management</li>
+<li>Interrupt service routines</li>
+<li>Processor scheduling</li>
+<li>Backing store management</li>
+<li>Management of all input and output</li>
+</ul>
+<h2 id="Paging-and-segmentation"><a href="#Paging-and-segmentation" class="headerlink" title="Paging and segmentation"></a>Paging and segmentation</h2><p>These are two different techniques for making the optimum use of memory by splitting it into small sections.</p>
+<p>In a paging system, memory is divided into fixed size pages of 4Kb each, and a process currently in memory may be held in several non-contiguous pages. This means the logical memory slots next to each other may be physically stored in anywhere in the memory space. A page table uses mapping to store a link between the physical memory address and the logical address of each process.</p>
+<p>Segmentation is the logical division of address space into varying length segments which depend on the program structure. As with paging, it is possible to load only a part of a program into memory initially.</p>
+<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I/O operation is complete or an error occurs.</p>
+<p>Interrupts are also regularly triggered by a timer, to indicate that it is the turn of the next process to have processor time. This is for multi-tasking to take place.</p>
+<h3 id="Interrupts-service-routines"><a href="#Interrupts-service-routines" class="headerlink" title="Interrupts service routines"></a>Interrupts service routines</h3><p>When the CPU receives an interrupt signal, an interrupt service routine is called to deal with the interrupt. Depending on the type of interrupt, a particular routine will be run in order to service it. Interrupts have different priorities and low priority interrupt may be disabled while a higher priority interrupt is been serviced. Examples of interrupts in descending order of priority are given below:</p>
+<ul>
+<li>Power-fail interrupt</li>
+<li>Clock interrupt</li>
+<li>An I/O device sends a signal requesting service or signalling end of I/O operation</li>
+</ul>
+<h2 id="Processor-scheduling"><a href="#Processor-scheduling" class="headerlink" title="Processor scheduling"></a>Processor scheduling</h2><p>With computers able to run multiple applications simultaneously, the operating system is responsible for allocating processor time to each one as they compete for the CPU. While one application is busy using CPU for processing, the OS can queue up the next process required by another application to make the most efficient use of the processor. By carrying out small parts of multiple larger tasks in turn, the processor can carry out several tasks simultaneously. This is what is meant by multitasking.</p>
+<p>The Scheduler is the operating system module responsible for making sure that processor time is used as efficiently as possible. The objectives of the scheduler are to:</p>
+<ul>
+<li>Maximise throughput</li>
+<li>Be fair to all users</li>
+<li>Provide acceptable response time to all users</li>
+<li>Ensure hardware resources are kept as busy as possible</li>
+<li>There are many different scheduling algorithms and some of them are described below.</li>
+</ul>
+<h3 id="Round-Robin"><a href="#Round-Robin" class="headerlink" title="Round Robin"></a>Round Robin</h3><p>In Round robin scheduling, processes are dispatched on a first in first out basis, with each process in turn being given a limited amount of CPU time called a time slice. If the process does not complete before its time expires, or before a higher priority interrupt occurs, the dispatcher gives the CPU to the next process.</p>
+<p>In order to do this, the operating system has a interval timer to generate interrupts at specific times.</p>
+<h3 id="First-come-first-served"><a href="#First-come-first-served" class="headerlink" title="First come first served"></a>First come first served</h3><p>Jobs are processed in the order in which they arrive, with no system of priorities.</p>
+<h3 id="Shortest-remaining-time"><a href="#Shortest-remaining-time" class="headerlink" title="Shortest remaining time"></a>Shortest remaining time</h3><p>The process with the smallest estimated time remaining is run next. However, the disadvantage is that the user has to estimate the job time.</p>
+<h3 id="Multi-level-feedback-queues"><a href="#Multi-level-feedback-queues" class="headerlink" title="Multi-level feedback queues"></a>Multi-level feedback queues</h3><p>The algorithm is designed to:</p>
+<ul>
+<li>Give preference to short jobs</li>
+<li>Give preference to I/O bound processes</li>
+<li>Separate processes into categories based on their need for the processor</li>
+</ul>
+<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/Programming_and_Algorithms/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<a id="more"></a>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">numbers = [3, 2, 1, 5, 36, 7, 13, 21]</span><br><span class="line"></span><br><span class="line">for i in range(1, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    while j &gt; 0 and temp &lt; numbers[j - 1]:</span><br><span class="line">        numbers[j] = numbers[j - 1]</span><br><span class="line">       	j -= 1</span><br><span class="line">   	numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/Programming_and_Algorithms/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<a id="more"></a>
+
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">numbers = [9, 5, 4, 15, 3, 8, 11, 2]</span><br><span class="line"></span><br><span class="line">num_items = len(numbers)</span><br><span class="line"></span><br><span class="line">while num_items &gt; 1:</span><br><span class="line">    x = 0</span><br><span class="line">   	while x &lt; num_items - 1:</span><br><span class="line">        if numbers[x] &gt; numbers[x+1]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+1]</span><br><span class="line">            numbers[x+1] = temp</span><br><span class="line">        x += 1</span><br><span class="line">    num_items -= 1</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+  </entry>
+  <entry>
+    <title>Software Development</title>
+    <url>/2019/09/20/CS_Theory/software-dev/</url>
+    <content><![CDATA[<p>In this post I will make a summary for the different stages in the making of software. I’ll also compare some of the common methods used.</p>
+<a id="more"></a>
+
+<h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><p>Before a problem can be solved, it must be defined. The requirements of the system that solves the problem must be established. In the case of a data processing system, or for example the construction of a website, this could cover:</p>
+<ul>
+<li>The data - its origin, uses, volumes and characteristics</li>
+<li>The procedures - what is done, where, when and how, and how errors and exceptions are handled </li>
+<li>The future - development plans and expected growth rates</li>
+<li>Problems with any existing system</li>
+</ul>
+<h2 id="Design"><a href="#Design" class="headerlink" title="Design"></a>Design</h2><p>Depending on the type of project, the systems designer may consider some or all of the following:</p>
+<ul>
+<li>Processing - the algorithms and appropriate modular structure for the solution, specifying modules with clear documented interfaces</li>
+<li>Data structures - how data will be held and how it will be accessed. For example in a dynamic data structure such as a queue or tree, or in a file or database</li>
+<li>Output - content, format, sequence, frequency, medium (Screen or hard copy) etc.</li>
+<li>Input - volume, frequency, documents used, input methods</li>
+<li>User interface - screens and dialogues, menus, special-purpose requirements</li>
+<li>Security - how the data is to be kept secure from accidental corruption or deliberate tampering or hacking</li>
+<li>Hardware - selection of an appropriate configuration</li>
+</ul>
+<h2 id="Programming-and-Testing"><a href="#Programming-and-Testing" class="headerlink" title="Programming and Testing"></a>Programming and Testing</h2><h3 id="Black-box-testing"><a href="#Black-box-testing" class="headerlink" title="Black box testing"></a>Black box testing</h3><p>Black box testing is carried out independently of the code used in the program. It involves looking at the program specification and creating a set of test data that covers all the inputs and outputs and program functions</p>
+<h3 id="White-box-testing"><a href="#White-box-testing" class="headerlink" title="White box testing"></a>White box testing</h3><p>White box testing is dependent on the code logic, and derives from the program structure rather than its function. The program code is studied and tests are devised which test each possible path at least once. The weakness of white box testing is that it will not detect missing functions. </p>
+<h3 id="Alpha-testing"><a href="#Alpha-testing" class="headerlink" title="Alpha testing"></a>Alpha testing</h3><p>Alpha testing is carried out by the software developer’s in-house testing team. It is essentially because it often reveals both errors and omissions in the system requirements definition. The user may discover that the system does not in fact have the required functionality because the requirements were not specified carefully enough, or because the developer has overlooked or misunderstood something in the specification.</p>
+<h3 id="Beta-testing"><a href="#Beta-testing" class="headerlink" title="Beta testing"></a>Beta testing</h3><p>When a new package is being developed for release as a software package, beta testing is often used. This involves giving the package to a number of potential users who agree to use the system and report any problems to the developers. This exposes the product to real use and detects problems and errors that may not have been anticipated by the developers. </p>
+<h2 id="The-waterfall-lifecycle-model"><a href="#The-waterfall-lifecycle-model" class="headerlink" title="The waterfall lifecycle model"></a>The waterfall lifecycle model</h2><p>The waterfall model illustrates the methodology described above, in which each step is completed one at a time from beginning to end. Each step has specific outputs that lead into the next step. It is possible to return to a previous step if necessary but the model shows that the developers then have to work back down through the following stages.</p>
+<p>The user is involved at the start of the process in the analysis stage, but then has little input until the evaluation stage.</p>
+<p>The full steps of a waterfall lifecycle model is:</p>
+<ol>
+<li>Analysis</li>
+<li>Design</li>
+<li>Implementation</li>
+<li>Evaluation</li>
+<li>Maintenance</li>
+</ol>
+<h2 id="Spiral-model"><a href="#Spiral-model" class="headerlink" title="Spiral model"></a>Spiral model</h2><p>The spiral model uses the same structured steps but introduces the idea of developing the software in iterative stages. At the start of the process the requirements are defined and the developers work towards an initial prototype. Each successive loop around the spiral generates a refined prototype until the product is finished.</p>
+<ol>
+<li>Analysis</li>
+<li>Design</li>
+<li>Implementation</li>
+<li>Evaluation</li>
+<li>Maintenance</li>
+<li>Start the loop again back at analysis</li>
+</ol>
+<p>Each time around the spiral the following activities are performed:</p>
+<ul>
+<li>Analyse the requirements for the next prototype</li>
+<li>Design the next version, the new prototype</li>
+<li>Implement(code and test) the new prototype</li>
+<li>Evaluate the new prototype, which generates a plan for the next iteration</li>
+</ul>
+<p>The spiral model is mostly used for large scale projects, for example, projects that take years to deliver. Smaller projects use a variation on this called the <a href="#agile-modelling">Agile Model</a>.</p>
+<h2 id="Agile-Modelling"><a href="#Agile-Modelling" class="headerlink" title="Agile Modelling"></a>Agile Modelling</h2><p>At all stages of analysis, design and implementation, an agile approach may be adopted, as the stages of software development may not be completed in a linear sequence. It might be that some analysis is done and then some parts of a system are designed and implemented while other parts are still being analysed and then, for example, implementations and testing may be intermixed. the developer may then go back to design another aspect of the system.</p>
+<p>Throughout the process, feedback will be obtained from the user. This is an iterative process during which changes made are incremental as the next part of the system is built.</p>
+<p>The full steps of an agile model are:</p>
+<ol>
+<li>Requirement gathering</li>
+<li>Quick design</li>
+<li>Build prototype</li>
+<li>Customer evaluation</li>
+<li>Refine prototype (may move back to quick design)</li>
+<li>Create final system</li>
+</ol>
+<p>At each stage, a prototype is built with user participation to ensure that the system is being developed in line with what the user wants. The success of the software depends on:</p>
+<ul>
+<li>Keeping the model simple, and not trying to incorporate features which may come in useful at a later date</li>
+<li>Rapid feedback from the user</li>
+<li>Understanding that user requirements may change during development as they are forced to consider their needs in detail</li>
+<li>Being prepared to make incremental changes as the model develops</li>
+</ul>
+<h2 id="Extreme-programming"><a href="#Extreme-programming" class="headerlink" title="Extreme programming"></a>Extreme programming</h2><p>Extreme programming is a software development technique which is intended to improve software quality and responsiveness to changing customer requirements. It is a type of agile software development in which frequent ‘releases’ of the software are made in short development cycles. This is intended to improve productivity and introduce checkpoints at which new customer requirements can be adopted.</p>
+<h2 id="Rapid-application-development"><a href="#Rapid-application-development" class="headerlink" title="Rapid application development"></a>Rapid application development</h2><p>Some very large projects may be developed over a long period of time during which both technology and user requirements change. Major changes at late stages of development can sometimes lead to projects being cancelled or restarted, at considerable costs. In response to this problem the RAD methodology was introduced, offering the promise of much faster completion of major projects. The ideas behind it include:</p>
+<ul>
+<li>Workshops and focus groups to gather requirements rather than a formal requirement document</li>
+<li>The use of prototyping to continually refine the system in response to user involvement and feedback</li>
+<li>Producing within a strict time limit each part of the system, which may not be perfect but which is good enough</li>
+<li>Reusing any software components which have already been used elsewhere</li>
+</ul>
+<h2 id="Merits-and-drawbacks-of-each-method"><a href="#Merits-and-drawbacks-of-each-method" class="headerlink" title="Merits and drawbacks of each method"></a>Merits and drawbacks of each method</h2><p>The <a href="#the-waterfall-lifecycle-model">waterfall system lifecycle</a> approach is suitable for very small projects which need careful supervision, such as those undertaken by students or trainees. The absence of user involvement is a serious drawback.</p>
+<p>The <a href="#spiral-model">spiral model</a> and the <a href="#agile-modelling">agile approach</a> are an improvement in that they acknowledge that users often cannot specify the requirements accurately because they don’t understand what is possible. It is much easier to examine a working prototype and figure out what needs to be donw to turn it into a useful system.</p>
+<p><a href="#extreme-programming">Extreme programming</a> and <a href="#rapid-application-development">rapid application development</a> are good methodologies for large projects when there is a danger of getting bogged down or sidetracked by suggested improvements, so that developers are constantly chasing a moving target.</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>CPU Components</title>
+    <url>/2019/09/20/CS_Theory/CPU-components/</url>
+    <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
+<a id="more"></a>
+
+
+<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>Performs arithmetic and logical operations on the data. It can add, subtract, multiply and divide on fixed or floating point numbers.</p>
+<h2 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h2><p>Controls and coordinates the activities of the CPU, directing the flow of data between the CPU and other devices. It accepts the next instruction, decodes it into several sequential steps, executes it and stores the resulting data back in memory or registers.</p>
+<h2 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h2><h3 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h3><p>The program counter holds the address of the next instruction to be executed</p>
+<h3 id="ACC"><a href="#ACC" class="headerlink" title="ACC"></a>ACC</h3><p>The accumulator takes place of the general purpose registers.</p>
+<h3 id="MAR"><a href="#MAR" class="headerlink" title="MAR"></a>MAR</h3><p>The memory address register holds the address of the memory location from which data (or an instruction) is to be fetched or to which data is to be written</p>
+<h3 id="MDR"><a href="#MDR" class="headerlink" title="MDR"></a>MDR</h3><p>The memory data register is used to temporarily store the data read from or written to memory. It is also sometimes known as the memory buffer register</p>
+<h3 id="CIR"><a href="#CIR" class="headerlink" title="CIR"></a>CIR</h3><p>The current instruction register holds the current instruction being executed, divided into oprand and opcode.</p>
+<h2 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h2><h3 id="Data-Bus"><a href="#Data-Bus" class="headerlink" title="Data Bus"></a>Data Bus</h3><p>The data bus, typically consisting of 8, 16, 32 or 64 lines, provides a bi-directional path for moving data and instructions between system components</p>
+<h3 id="Address-Bus"><a href="#Address-Bus" class="headerlink" title="Address Bus"></a>Address Bus</h3><p>The address bus transmits the memory addresses so that the data can be retrieved and sent back to the processor. It is one directional.</p>
+<h3 id="Control-Bus"><a href="#Control-Bus" class="headerlink" title="Control Bus"></a>Control Bus</h3><p>The control bus is a bi-directional bus. The data and address buses are shared by all components of the system. Control lines are used to ensure the access and use of the data and address buses by the different components of the system does not lead to conflict</p>
+<p>The purpose of the control bus is to transmit command, timing and specific status information between system components</p>
+<p>Control lines include:</p>
+<ul>
+<li>Bus Request: indicates that a device is requesting the use of the data bus</li>
+<li>Bus Grant: indicates that the CPU has granted access to the data bus</li>
+<li>Memory Write: causes the data on the data bus to be written into the addressed location</li>
+<li>Memory Read: causes data from the addresses location to be placed on the data bus</li>
+<li>Interrupt Request: indicates that a device is requesting access to the CPU</li>
+<li>Clock: used to synchronise operations</li>
+</ul>
+]]></content>
+  </entry>
+</search>
