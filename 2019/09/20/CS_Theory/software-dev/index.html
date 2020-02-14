@@ -15,36 +15,10 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
 
-
 <script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    hostname: new URL('https://bensonater.github.io').hostname,
-    root: '/',
-    scheme: 'Pisces',
-    version: '7.7.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":true,"scrollpercent":true},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: true,
-    lazyload: false,
-    pangu: false,
-    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: 'search.xml',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
-  };
-</script>
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"bensonater.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
 
   <meta name="description" content="In this post I will make a summary for the different stages in the making of software. I’ll also compare some of the common methods used.">
 <meta property="og:type" content="article">
@@ -53,7 +27,7 @@
 <meta property="og:site_name" content="Return 0">
 <meta property="og:description" content="In this post I will make a summary for the different stages in the making of software. I’ll also compare some of the common methods used.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-10-08T20:05:35.195Z">
+<meta property="og:updated_time" content="2020-02-14T11:13:47.945Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Software Development">
 <meta name="twitter:description" content="In this post I will make a summary for the different stages in the making of software. I’ll also compare some of the common methods used.">
@@ -109,6 +83,14 @@
 
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
   <div class="site-meta">
 
     <div>
@@ -121,13 +103,7 @@
         <p class="site-subtitle">A Perosnal Blog</p>
   </div>
 
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="Toggle navigation bar">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
+  <div class="site-nav-right"></div>
 </div>
 
 
@@ -163,9 +139,9 @@
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+    <input autocomplete="off" autocorrect="off" autocapitalize="off"
            placeholder="Searching..." spellcheck="false"
-           type="text" id="search-input">
+           type="search" class="search-input">
   </div>
   <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
@@ -226,7 +202,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-10-08 21:05:35" itemprop="dateModified" datetime="2019-10-08T21:05:35+01:00">2019-10-08</time>
+                <time title="Modified: 2020-02-14 11:13:47" itemprop="dateModified" datetime="2020-02-14T11:13:47+00:00">2020-02-14</time>
               </span>
 
           
@@ -246,7 +222,7 @@
 <h2 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h2><p>Before a problem can be solved, it must be defined. The requirements of the system that solves the problem must be established. In the case of a data processing system, or for example the construction of a website, this could cover:</p>
 <ul>
 <li>The data - its origin, uses, volumes and characteristics</li>
-<li>The procedures - what is done, where, when and how, and how errors and exceptions are handled </li>
+<li>The procedures - what is done, where, when and how, and how errors and exceptions are handled</li>
 <li>The future - development plans and expected growth rates</li>
 <li>Problems with any existing system</li>
 </ul>
@@ -261,9 +237,9 @@
 <li>Hardware - selection of an appropriate configuration</li>
 </ul>
 <h2 id="Programming-and-Testing"><a href="#Programming-and-Testing" class="headerlink" title="Programming and Testing"></a>Programming and Testing</h2><h3 id="Black-box-testing"><a href="#Black-box-testing" class="headerlink" title="Black box testing"></a>Black box testing</h3><p>Black box testing is carried out independently of the code used in the program. It involves looking at the program specification and creating a set of test data that covers all the inputs and outputs and program functions</p>
-<h3 id="White-box-testing"><a href="#White-box-testing" class="headerlink" title="White box testing"></a>White box testing</h3><p>White box testing is dependent on the code logic, and derives from the program structure rather than its function. The program code is studied and tests are devised which test each possible path at least once. The weakness of white box testing is that it will not detect missing functions. </p>
+<h3 id="White-box-testing"><a href="#White-box-testing" class="headerlink" title="White box testing"></a>White box testing</h3><p>White box testing is dependent on the code logic, and derives from the program structure rather than its function. The program code is studied and tests are devised which test each possible path at least once. The weakness of white box testing is that it will not detect missing functions.</p>
 <h3 id="Alpha-testing"><a href="#Alpha-testing" class="headerlink" title="Alpha testing"></a>Alpha testing</h3><p>Alpha testing is carried out by the software developer’s in-house testing team. It is essentially because it often reveals both errors and omissions in the system requirements definition. The user may discover that the system does not in fact have the required functionality because the requirements were not specified carefully enough, or because the developer has overlooked or misunderstood something in the specification.</p>
-<h3 id="Beta-testing"><a href="#Beta-testing" class="headerlink" title="Beta testing"></a>Beta testing</h3><p>When a new package is being developed for release as a software package, beta testing is often used. This involves giving the package to a number of potential users who agree to use the system and report any problems to the developers. This exposes the product to real use and detects problems and errors that may not have been anticipated by the developers. </p>
+<h3 id="Beta-testing"><a href="#Beta-testing" class="headerlink" title="Beta testing"></a>Beta testing</h3><p>When a new package is being developed for release as a software package, beta testing is often used. This involves giving the package to a number of potential users who agree to use the system and report any problems to the developers. This exposes the product to real use and detects problems and errors that may not have been anticipated by the developers.</p>
 <h2 id="The-waterfall-lifecycle-model"><a href="#The-waterfall-lifecycle-model" class="headerlink" title="The waterfall lifecycle model"></a>The waterfall lifecycle model</h2><p>The waterfall model illustrates the methodology described above, in which each step is completed one at a time from beginning to end. Each step has specific outputs that lead into the next step. It is possible to return to a previous step if necessary but the model shows that the developers then have to work back down through the following stages.</p>
 <p>The user is involved at the start of the process in the analysis stage, but then has little input until the evaluation stage.</p>
 <p>The full steps of a waterfall lifecycle model is:</p>
@@ -318,7 +294,7 @@
 <li>Reusing any software components which have already been used elsewhere</li>
 </ul>
 <h2 id="Merits-and-drawbacks-of-each-method"><a href="#Merits-and-drawbacks-of-each-method" class="headerlink" title="Merits and drawbacks of each method"></a>Merits and drawbacks of each method</h2><p>The <a href="#the-waterfall-lifecycle-model">waterfall system lifecycle</a> approach is suitable for very small projects which need careful supervision, such as those undertaken by students or trainees. The absence of user involvement is a serious drawback.</p>
-<p>The <a href="#spiral-model">spiral model</a> and the <a href="#agile-modelling">agile approach</a> are an improvement in that they acknowledge that users often cannot specify the requirements accurately because they don’t understand what is possible. It is much easier to examine a working prototype and figure out what needs to be donw to turn it into a useful system.</p>
+<p>The <a href="#spiral-model">spiral model</a> and the <a href="#agile-modelling">agile approach</a> are an improvement in that they acknowledge that users often cannot specify the requirements accurately because they don’t understand what is possible. It is much easier to examine a working prototype and figure out what needs to be done to turn it into a useful system.</p>
 <p><a href="#extreme-programming">Extreme programming</a> and <a href="#rapid-application-development">rapid application development</a> are good methodologies for large projects when there is a danger of getting bogged down or sidetracked by suggested improvements, so that developers are constantly chasing a moving target.</p>
 
     </div>
