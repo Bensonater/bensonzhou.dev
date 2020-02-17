@@ -20,18 +20,20 @@
     var CONFIG = {"hostname":"bensonater.github.io","root":"/","scheme":"Pisces","version":"7.7.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Return 0">
-<meta property="og:url" content="https://bensonater.github.io/archives/2019/index.html">
+  <meta name="description" content="Google’s Page Rank algorithm and how to calculate it">
+<meta name="keywords" content="Algorithms">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Page Rank Algorithm">
+<meta property="og:url" content="https://bensonater.github.io/2019/09/27/page-rank/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
+<meta property="og:description" content="Google’s Page Rank algorithm and how to calculate it">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-02-17T20:24:35.871Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Return 0">
-<meta name="twitter:description" content="Watch me run this npm command that&apos;ll send us deeper into dependency hell">
+<meta name="twitter:title" content="Page Rank Algorithm">
+<meta name="twitter:description" content="Google’s Page Rank algorithm and how to calculate it">
 
-<link rel="canonical" href="https://bensonater.github.io/archives/2019/">
+<link rel="canonical" href="https://bensonater.github.io/2019/09/27/page-rank/">
 
 
 <script id="page-configurations">
@@ -39,11 +41,11 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false
+    isPost: true
   };
 </script>
 
-  <title>Archive | Return 0</title>
+  <title>Page Rank Algorithm | Return 0</title>
   
 
 
@@ -171,289 +173,103 @@
           <div class="content">
             
 
+  <div class="posts-expand">
+      
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <span class="collection-header">Um..! 15 posts in total. Keep on posting.</span>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="en">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/09/27/page-rank/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Benson Zhou">
+      <meta itemprop="description" content="Watch me run this npm command that'll send us deeper into dependency hell">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Return 0">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Page Rank Algorithm
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-09-27 09:26:52" itemprop="dateCreated datePublished" datetime="2019-09-27T09:26:52+01:00">2019-09-27</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-02-17 20:24:35" itemprop="dateModified" datetime="2020-02-17T20:24:35+00:00">2020-02-17</time>
+              </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
+        <p>Google’s Page Rank algorithm and how to calculate it</p>
+<a id="more"></a>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-16T10:33:05+00:00"
-              content="2019-11-16">
-          11-16
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/16/database/" itemprop="url">
-            <span itemprop="name">Database</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-11-11T09:52:11+00:00"
-              content="2019-11-11">
-          11-11
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/11/11/problem-solving/" itemprop="url">
-            <span itemprop="name">Problem Solving</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-10-08T21:04:11+01:00"
-              content="2019-10-08">
-          10-08
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/10/08/optimisation-algorithms/" itemprop="url">
-            <span itemprop="name">Optimisation Algorithms</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-27T09:26:52+01:00"
-              content="2019-09-27">
-          09-27
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/27/page-rank/" itemprop="url">
-            <span itemprop="name">Page Rank Algorithm</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-21T12:03:13+01:00"
-              content="2019-09-21">
-          09-21
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/21/quick-sort/" itemprop="url">
-            <span itemprop="name">Quick Sort</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-21T12:02:35+01:00"
-              content="2019-09-21">
-          09-21
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/21/merge-sort/" itemprop="url">
-            <span itemprop="name">Merge Sort</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T19:45:07+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/time-complexities/" itemprop="url">
-            <span itemprop="name">Time Complexities</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T15:07:38+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/processor-performance/" itemprop="url">
-            <span itemprop="name">Processor Performance</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T15:07:37+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/os/" itemprop="url">
-            <span itemprop="name">Operating System</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T11:00:15+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/insertion-sort/" itemprop="url">
-            <span itemprop="name">Insertion Sort</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T11:00:15+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/bubble-sort/" itemprop="url">
-            <span itemprop="name">Bubble Sort</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T11:00:15+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/software-dev/" itemprop="url">
-            <span itemprop="name">Software Development</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2019-09-20T11:00:15+01:00"
-              content="2019-09-20">
-          09-20
-        </time>
-      </div>
-
-      <h2 class="post-title">
-          <a class="post-title-link" href="/2019/09/20/CPU-components/" itemprop="url">
-            <span itemprop="name">CPU Components</span>
-          </a>
-      </h2>
-
-    </header>
-  </article>
-
+<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
+<p>The PageRank algorithm itself is defined as:</p>
+<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>where:</p>
+<ul>
+<li>PR(A) is the PageRank of page A</li>
+<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
+<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
+</ul>
+<p>The PageRank of a page is constantly being recalculated and updated.</p>
 
     </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/source/tags/Algorithms/" rel="tag"># Algorithms</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/09/21/quick-sort/" rel="prev" title="Quick Sort">
+      <i class="fa fa-chevron-left"></i> Quick Sort
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/10/08/optimisation-algorithms/" rel="next" title="Optimisation Algorithms">
+      Optimisation Algorithms <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
