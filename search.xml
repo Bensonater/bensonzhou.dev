@@ -1,6 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<a id="more"></a>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = len(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CPU Components</title>
+    <url>/2019/09/20/CPU-components/</url>
+    <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
+<a id="more"></a>
+
+<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>Performs arithmetic and logical operations on the data. It can add, subtract, multiply and divide on fixed or floating point numbers.</p>
+<h2 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h2><p>Controls and coordinates the activities of the CPU, directing the flow of data between the CPU and other devices. It accepts the next instruction, decodes it into several sequential steps, executes it and stores the resulting data back in memory or registers.</p>
+<h2 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h2><h3 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h3><p>The program counter holds the address of the next instruction to be executed</p>
+<h3 id="ACC"><a href="#ACC" class="headerlink" title="ACC"></a>ACC</h3><p>The accumulator takes place of the general purpose registers.</p>
+<h3 id="MAR"><a href="#MAR" class="headerlink" title="MAR"></a>MAR</h3><p>The memory address register holds the address of the memory location from which data (or an instruction) is to be fetched or to which data is to be written</p>
+<h3 id="MDR"><a href="#MDR" class="headerlink" title="MDR"></a>MDR</h3><p>The memory data register is used to temporarily store the data read from or written to memory. It is also sometimes known as the memory buffer register</p>
+<h3 id="CIR"><a href="#CIR" class="headerlink" title="CIR"></a>CIR</h3><p>The current instruction register holds the current instruction being executed, divided into oprand and opcode.</p>
+<h2 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h2><h3 id="Data-Bus"><a href="#Data-Bus" class="headerlink" title="Data Bus"></a>Data Bus</h3><p>The data bus, typically consisting of 8, 16, 32 or 64 lines, provides a bi-directional path for moving data and instructions between system components</p>
+<h3 id="Address-Bus"><a href="#Address-Bus" class="headerlink" title="Address Bus"></a>Address Bus</h3><p>The address bus transmits the memory addresses so that the data can be retrieved and sent back to the processor. It is one directional.</p>
+<h3 id="Control-Bus"><a href="#Control-Bus" class="headerlink" title="Control Bus"></a>Control Bus</h3><p>The control bus is a bi-directional bus. The data and address buses are shared by all components of the system. Control lines are used to ensure the access and use of the data and address buses by the different components of the system does not lead to conflict</p>
+<p>The purpose of the control bus is to transmit command, timing and specific status information between system components</p>
+<p>Control lines include:</p>
+<ul>
+<li>Bus Request: indicates that a device is requesting the use of the data bus</li>
+<li>Bus Grant: indicates that the CPU has granted access to the data bus</li>
+<li>Memory Write: causes the data on the data bus to be written into the addressed location</li>
+<li>Memory Read: causes data from the addresses location to be placed on the data bus</li>
+<li>Interrupt Request: indicates that a device is requesting access to the CPU</li>
+<li>Clock: used to synchronise operations</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Review: Emily is Away Too</title>
     <url>/2020/02/17/emily-is-away-too/</url>
     <content><![CDATA[<p>There’s only so many ways to write a high-school drama.</p>
@@ -11,22 +55,6 @@
 <p>The nostalgia of the game is still strong, especially with bands like Senses Fail and Linkin Park showing up for alternative music fans like me. However, there isn’t much more than that beyond the retro style interface of Emily is Away Too. There’s only so many ways to write a teenage high-school story, and unfortunately Emily is Away Too falls on the bottom half of the pile.</p>
 <p>Verdict: 6 has-been pop punk bands out of 10</p>
 <p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/" target="_blank" rel="noopener">Emily is Away Too is available on Steam</a></p>
-]]></content>
-      <tags>
-        <tag>Reviews</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Review: Emily is Away</title>
-    <url>/2020/02/17/emily-is-away/</url>
-    <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
-<a id="more"></a>
-
-<p>Part time machine, part nostalgia trip - Emily is Away is a text-based game that harks back to the early days of the Internet. The gameplay features a mock-up of AOL instant messenger in a Window XP operating system, where you could change your text colour to lime green and put up ‘edgy’ emo quotes on your profile page. The story is one of high school romance which players can (hopefully) relate to. While it does seem to be uneventful and too slice-of-life to start with, the final chapter (2006) is where Emily is Away truly begins to shine. Seeing the protagonist revising genuine, heartaching questions in favour of mundane, how-is-the-weather chit-chat feels like being hit by a semi-truck as the conversation/story comes to an awkward end with the protagonist logging off earlier than Emily does, for the first time in the game.</p>
-<p>In some ways, Emily is Away is a hardcore age-check for the playerbase. It is clearly designed from a millennial’s perspective, with references to pop culture (blink-182, anyone?) that ‘kids these days’ wouldn’t understand. It’s almost a massive inside joke for people who went to high school during the early 2000s to some extent.</p>
-<p>But behind all those throwback profile pictures and dial-up Internet noises, Emily is Away divides its critics by revolving the story around something only people above a certain age experienced: No friendship lasts forever. The people you hang out with would eventually grow distant as your life paths diverge. Despite the protagonist’s clear, romantic intentions towards Emily, she no longer cares. It is brutal and emotionally devastating, but one day we would all abandon our friends, youth and memories just like we abandoned AOL instant messenger. And that’s where the age-check comes in, reminding you that it’s time to grow up and stop wondering about what-could-have-been.</p>
-<p>Verdict: 8.7 Windows Sticky Notes out of 10</p>
-<p><a href="https://store.steampowered.com/app/417860/Emily_is_Away/" target="_blank" rel="noopener">Emily is Away is available on Steam</a></p>
 ]]></content>
       <tags>
         <tag>Reviews</tag>
@@ -68,16 +96,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
 <a id="more"></a>
 
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+
 ]]></content>
       <tags>
-        <tag>CS Theory</tag>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -102,54 +130,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Page Rank Algorithm</title>
-    <url>/2019/09/27/page-rank/</url>
-    <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
+    <title>Review: Emily is Away</title>
+    <url>/2020/02/17/emily-is-away/</url>
+    <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
 <a id="more"></a>
 
-<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
-<p>The PageRank algorithm itself is defined as:</p>
-<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
-<p>where:</p>
-<ul>
-<li>PR(A) is the PageRank of page A</li>
-<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
-<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
-<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
-</ul>
-<p>The PageRank of a page is constantly being recalculated and updated.</p>
+<p>Part time machine, part nostalgia trip - Emily is Away is a text-based game that harks back to the early days of the Internet. The gameplay features a mock-up of AOL instant messenger in a Window XP operating system, where you could change your text colour to lime green and put up ‘edgy’ emo quotes on your profile page. The story is one of high school romance which players can (hopefully) relate to. While it does seem to be uneventful and too slice-of-life to start with, the final chapter (2006) is where Emily is Away truly begins to shine. Seeing the protagonist revising genuine, heartaching questions in favour of mundane, how-is-the-weather chit-chat feels like being hit by a semi-truck as the conversation/story comes to an awkward end with the protagonist logging off earlier than Emily does, for the first time in the game.</p>
+<p>In some ways, Emily is Away is a hardcore age-check for the playerbase. It is clearly designed from a millennial’s perspective, with references to pop culture (blink-182, anyone?) that ‘kids these days’ wouldn’t understand. It’s almost a massive inside joke for people who went to high school during the early 2000s to some extent.</p>
+<p>But behind all those throwback profile pictures and dial-up Internet noises, Emily is Away divides its critics by revolving the story around something only people above a certain age experienced: No friendship lasts forever. The people you hang out with would eventually grow distant as your life paths diverge. Despite the protagonist’s clear, romantic intentions towards Emily, she no longer cares. It is brutal and emotionally devastating, but one day we would all abandon our friends, youth and memories just like we abandoned AOL instant messenger. And that’s where the age-check comes in, reminding you that it’s time to grow up and stop wondering about what-could-have-been.</p>
+<p>Verdict: 8.7 Windows Sticky Notes out of 10</p>
+<p><a href="https://store.steampowered.com/app/417860/Emily_is_Away/" target="_blank" rel="noopener">Emily is Away is available on Steam</a></p>
 ]]></content>
       <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Quick Sort</title>
-    <url>/2019/09/21/quick-sort/</url>
-    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<a id="more"></a>
-
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, len(a)<span class="number">-1</span>)</span><br><span class="line">print(sorted_a)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
+        <tag>Reviews</tag>
       </tags>
   </entry>
   <entry>
@@ -172,43 +165,22 @@
       </tags>
   </entry>
   <entry>
-    <title>Time Complexities</title>
-    <url>/2019/09/20/time-complexities/</url>
-    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
+    <title>Page Rank Algorithm</title>
+    <url>/2019/09/27/page-rank/</url>
+    <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
 <a id="more"></a>
 
-<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
-<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
-<p>The basic steps are:</p>
+<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
+<p>The PageRank algorithm itself is defined as:</p>
+<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>where:</p>
 <ul>
-<li>Divide the unsorted list into n sublists, each containing one element</li>
-<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+<li>PR(A) is the PageRank of page A</li>
+<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
+<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
 </ul>
-<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
-<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
-<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
-<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
-</ul>
+<p>The PageRank of a page is constantly being recalculated and updated.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -292,29 +264,45 @@
       </tags>
   </entry>
   <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <a id="more"></a>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, len(a)<span class="number">-1</span>)</span><br><span class="line">print(sorted_a)</span><br></pre></td></tr></table></figure>
 
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
 <a id="more"></a>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = len(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
-
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
-        <tag>Algorithms</tag>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -406,34 +394,46 @@
       </tags>
   </entry>
   <entry>
-    <title>CPU Components</title>
-    <url>/2019/09/20/CPU-components/</url>
-    <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
+    <title>Time Complexities</title>
+    <url>/2019/09/20/time-complexities/</url>
+    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
 <a id="more"></a>
 
-<h2 id="ALU"><a href="#ALU" class="headerlink" title="ALU"></a>ALU</h2><p>Performs arithmetic and logical operations on the data. It can add, subtract, multiply and divide on fixed or floating point numbers.</p>
-<h2 id="Control-Unit"><a href="#Control-Unit" class="headerlink" title="Control Unit"></a>Control Unit</h2><p>Controls and coordinates the activities of the CPU, directing the flow of data between the CPU and other devices. It accepts the next instruction, decodes it into several sequential steps, executes it and stores the resulting data back in memory or registers.</p>
-<h2 id="Registers"><a href="#Registers" class="headerlink" title="Registers"></a>Registers</h2><h3 id="PC"><a href="#PC" class="headerlink" title="PC"></a>PC</h3><p>The program counter holds the address of the next instruction to be executed</p>
-<h3 id="ACC"><a href="#ACC" class="headerlink" title="ACC"></a>ACC</h3><p>The accumulator takes place of the general purpose registers.</p>
-<h3 id="MAR"><a href="#MAR" class="headerlink" title="MAR"></a>MAR</h3><p>The memory address register holds the address of the memory location from which data (or an instruction) is to be fetched or to which data is to be written</p>
-<h3 id="MDR"><a href="#MDR" class="headerlink" title="MDR"></a>MDR</h3><p>The memory data register is used to temporarily store the data read from or written to memory. It is also sometimes known as the memory buffer register</p>
-<h3 id="CIR"><a href="#CIR" class="headerlink" title="CIR"></a>CIR</h3><p>The current instruction register holds the current instruction being executed, divided into oprand and opcode.</p>
-<h2 id="Buses"><a href="#Buses" class="headerlink" title="Buses"></a>Buses</h2><h3 id="Data-Bus"><a href="#Data-Bus" class="headerlink" title="Data Bus"></a>Data Bus</h3><p>The data bus, typically consisting of 8, 16, 32 or 64 lines, provides a bi-directional path for moving data and instructions between system components</p>
-<h3 id="Address-Bus"><a href="#Address-Bus" class="headerlink" title="Address Bus"></a>Address Bus</h3><p>The address bus transmits the memory addresses so that the data can be retrieved and sent back to the processor. It is one directional.</p>
-<h3 id="Control-Bus"><a href="#Control-Bus" class="headerlink" title="Control Bus"></a>Control Bus</h3><p>The control bus is a bi-directional bus. The data and address buses are shared by all components of the system. Control lines are used to ensure the access and use of the data and address buses by the different components of the system does not lead to conflict</p>
-<p>The purpose of the control bus is to transmit command, timing and specific status information between system components</p>
-<p>Control lines include:</p>
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<p>The basic steps are:</p>
 <ul>
-<li>Bus Request: indicates that a device is requesting the use of the data bus</li>
-<li>Bus Grant: indicates that the CPU has granted access to the data bus</li>
-<li>Memory Write: causes the data on the data bus to be written into the addressed location</li>
-<li>Memory Read: causes data from the addresses location to be placed on the data bus</li>
-<li>Interrupt Request: indicates that a device is requesting access to the CPU</li>
-<li>Clock: used to synchronise operations</li>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
+<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
+<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
 </ul>
 ]]></content>
       <tags>
-        <tag>Hardware</tag>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
 </search>
