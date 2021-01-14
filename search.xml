@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<a id="more"></a>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = len(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
-
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CPU Components</title>
     <url>/2019/09/20/CPU-components/</url>
     <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
@@ -45,6 +32,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Review: Emily is Away</title>
+    <url>/2020/02/17/emily-is-away/</url>
+    <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
+<a id="more"></a>
+
+<p>Part time machine, part nostalgia trip - Emily is Away is a text-based game that harks back to the early days of the Internet. The gameplay features a mock-up of AOL instant messenger in a Window XP operating system, where you could change your text colour to lime green and put up ‘edgy’ emo quotes on your profile page. The story is one of high school romance which players can (hopefully) relate to. While it does seem to be uneventful and too slice-of-life to start with, the final chapter (2006) is where Emily is Away truly begins to shine. Seeing the protagonist revising genuine, heartaching questions in favour of mundane, how-is-the-weather chit-chat feels like being hit by a semi-truck as the conversation/story comes to an awkward end with the protagonist logging off earlier than Emily does, for the first time in the game.</p>
+<p>In some ways, Emily is Away is a hardcore age-check for the playerbase. It is clearly designed from a millennial’s perspective, with references to pop culture (blink-182, anyone?) that ‘kids these days’ wouldn’t understand. It’s almost a massive inside joke for people who went to high school during the early 2000s to some extent.</p>
+<p>But behind all those throwback profile pictures and dial-up Internet noises, Emily is Away divides its critics by revolving the story around something only people above a certain age experienced: No friendship lasts forever. The people you hang out with would eventually grow distant as your life paths diverge. Despite the protagonist’s clear, romantic intentions towards Emily, she no longer cares. It is brutal and emotionally devastating, but one day we would all abandon our friends, youth and memories just like we abandoned AOL instant messenger. And that’s where the age-check comes in, reminding you that it’s time to grow up and stop wondering about what-could-have-been.</p>
+<p>Verdict: 8.7 Windows Sticky Notes out of 10</p>
+<p><a href="https://store.steampowered.com/app/417860/Emily_is_Away/">Emily is Away is available on Steam</a></p>
+]]></content>
+      <tags>
+        <tag>Reviews</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<a id="more"></a>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Review: Emily is Away Too</title>
     <url>/2020/02/17/emily-is-away-too/</url>
     <content><![CDATA[<p>There’s only so many ways to write a high-school drama.</p>
@@ -54,7 +68,7 @@
 <p>One major factor for the magic of Emily is Away is that there are no happy endings in that game. No matter how desperate the player is at getting Emily back, she just doesn’t care anymore and decides to move on. It illustrates how friendships break down due to long distance or coming-of-age in real life. While Emily is Away Too definitely feels more like a choice-matters video game rather than a life lesson in this perspective, its endings are rather mundane and the storyline doesn’t subvert any expectations. It almost falls to the level of dating-sims and other visual novels, in that if you don’t upset Emily/Evelyn too much and play the nice-guy card, you ride into the sunset with her in a Disney-style ending.</p>
 <p>The nostalgia of the game is still strong, especially with bands like Senses Fail and Linkin Park showing up for alternative music fans like me. However, there isn’t much more than that beyond the retro style interface of Emily is Away Too. There’s only so many ways to write a teenage high-school story, and unfortunately Emily is Away Too falls on the bottom half of the pile.</p>
 <p>Verdict: 6 has-been pop punk bands out of 10</p>
-<p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/" target="_blank" rel="noopener">Emily is Away Too is available on Steam</a></p>
+<p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/">Emily is Away Too is available on Steam</a></p>
 ]]></content>
       <tags>
         <tag>Reviews</tag>
@@ -101,48 +115,9 @@
     <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
 <a id="more"></a>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">1</span>, len(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br></pre></td></tr></table></figure>
-
-]]></content>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line">print(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
       <tags>
         <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Optimisation Algorithms</title>
-    <url>/2019/10/08/optimisation-algorithms/</url>
-    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
-<a id="more"></a>
-
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Review: Emily is Away</title>
-    <url>/2020/02/17/emily-is-away/</url>
-    <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
-<a id="more"></a>
-
-<p>Part time machine, part nostalgia trip - Emily is Away is a text-based game that harks back to the early days of the Internet. The gameplay features a mock-up of AOL instant messenger in a Window XP operating system, where you could change your text colour to lime green and put up ‘edgy’ emo quotes on your profile page. The story is one of high school romance which players can (hopefully) relate to. While it does seem to be uneventful and too slice-of-life to start with, the final chapter (2006) is where Emily is Away truly begins to shine. Seeing the protagonist revising genuine, heartaching questions in favour of mundane, how-is-the-weather chit-chat feels like being hit by a semi-truck as the conversation/story comes to an awkward end with the protagonist logging off earlier than Emily does, for the first time in the game.</p>
-<p>In some ways, Emily is Away is a hardcore age-check for the playerbase. It is clearly designed from a millennial’s perspective, with references to pop culture (blink-182, anyone?) that ‘kids these days’ wouldn’t understand. It’s almost a massive inside joke for people who went to high school during the early 2000s to some extent.</p>
-<p>But behind all those throwback profile pictures and dial-up Internet noises, Emily is Away divides its critics by revolving the story around something only people above a certain age experienced: No friendship lasts forever. The people you hang out with would eventually grow distant as your life paths diverge. Despite the protagonist’s clear, romantic intentions towards Emily, she no longer cares. It is brutal and emotionally devastating, but one day we would all abandon our friends, youth and memories just like we abandoned AOL instant messenger. And that’s where the age-check comes in, reminding you that it’s time to grow up and stop wondering about what-could-have-been.</p>
-<p>Verdict: 8.7 Windows Sticky Notes out of 10</p>
-<p><a href="https://store.steampowered.com/app/417860/Emily_is_Away/" target="_blank" rel="noopener">Emily is Away is available on Steam</a></p>
-]]></content>
-      <tags>
-        <tag>Reviews</tag>
       </tags>
   </entry>
   <entry>
@@ -157,8 +132,26 @@
 <li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
 </ul>
 <p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span><span class="params">(merge_list)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> len(merge_list) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = len(merge_list) // <span class="number">2</span></span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; len(lefthalf) <span class="keyword">and</span> j &lt; len(righthalf):</span><br><span class="line">            <span class="keyword">if</span> lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; len(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; len(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line">merge_sort(a)</span><br><span class="line">print(a)</span><br></pre></td></tr></table></figure>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span>(<span class="params">merge_list</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(merge_list) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(merge_list) // <span class="number">2</span></span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            <span class="keyword">if</span> lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line">merge_sort(a)</span><br><span class="line">print(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+<a id="more"></a>
 
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance &#x3D; distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW &#x3D; newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -187,30 +180,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Processor Performance</title>
-    <url>/2019/09/20/processor-performance/</url>
-    <content><![CDATA[<p>What makes some processor faster than others?</p>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
 <a id="more"></a>
 
-<p>Factors affecting processor performance</p>
-<ul>
-<li>Clock speed</li>
-<li>The number of cores</li>
-<li>The amount and type of cache memory</li>
-</ul>
-<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
-<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
-<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
-<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
-<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
-<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
-<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
-<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
-<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
-<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
-        <tag>Hardware</tag>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -258,48 +237,6 @@
 <li>Separate processes into categories based on their need for the processor</li>
 </ul>
 <p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Quick Sort</title>
-    <url>/2019/09/21/quick-sort/</url>
-    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<a id="more"></a>
-
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span><span class="params">(a_list, start, end)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, len(a)<span class="number">-1</span>)</span><br><span class="line">print(sorted_a)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<a id="more"></a>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
@@ -391,6 +328,61 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Processor Performance</title>
+    <url>/2019/09/20/processor-performance/</url>
+    <content><![CDATA[<p>What makes some processor faster than others?</p>
+<a id="more"></a>
+
+<p>Factors affecting processor performance</p>
+<ul>
+<li>Clock speed</li>
+<li>The number of cores</li>
+<li>The amount and type of cache memory</li>
+</ul>
+<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
+<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
+<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
+<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
+<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
+<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
+<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
+<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
+<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
+<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+]]></content>
+      <tags>
+        <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<a id="more"></a>
+
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line">print(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
