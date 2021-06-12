@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.3.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -231,10 +231,11 @@
 
       
         <p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
-<a id="more"></a>
+<span id="more"></span>
 
 <h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance &#x3D; distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW &#x3D; newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
 <h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
 <p>The A* algorithm has two cost functions:</p>
 <ol>
