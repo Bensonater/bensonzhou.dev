@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>CPU Components</title>
     <url>/2019/09/20/CPU-components/</url>
     <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
@@ -41,6 +29,18 @@
 ]]></content>
       <tags>
         <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -111,6 +111,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Merge Sort</title>
     <url>/2019/09/21/merge-sort/</url>
     <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
@@ -129,12 +141,21 @@
       </tags>
   </entry>
   <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
 <span id="more"></span>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -191,24 +212,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Optimisation Algorithms</title>
-    <url>/2019/10/08/optimisation-algorithms/</url>
-    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
 <span id="more"></span>
 
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
-        <tag>Algorithms</tag>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -231,19 +244,6 @@
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -271,6 +271,49 @@
 ]]></content>
       <tags>
         <tag>Hardware</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Time Complexities</title>
+    <url>/2019/09/20/time-complexities/</url>
+    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
+<span id="more"></span>
+
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
+<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
+<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -388,49 +431,6 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Time Complexities</title>
-    <url>/2019/09/20/time-complexities/</url>
-    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
-<span id="more"></span>
-
-<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
-<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
-<p>The basic steps are:</p>
-<ul>
-<li>Divide the unsorted list into n sublists, each containing one element</li>
-<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
-</ul>
-<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
-<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
-<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
-<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
 </search>
