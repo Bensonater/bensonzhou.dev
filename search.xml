@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Review: Emily is Away Too</title>
-    <url>/2020/02/17/emily-is-away-too/</url>
-    <content><![CDATA[<p>There’s only so many ways to write a high-school drama.</p>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
 <span id="more"></span>
 
-<p>It’s generally frowned upon to re-badge a merchandise under a different name and sell it pretending it’s something new, but if it’s nostalgia we eat it all up anyways. This is what’s going on with Emily is Away Too. Despite having a similar storyline and playstyle with the first game, the sequel couldn’t quite deliver the emotional impact of its predecessor and no amount of low-pixel avatars is going to redeem it.</p>
-<p>One major factor for the magic of Emily is Away is that there are no happy endings in that game. No matter how desperate the player is at getting Emily back, she just doesn’t care anymore and decides to move on. It illustrates how friendships break down due to long distance or coming-of-age in real life. While Emily is Away Too definitely feels more like a choice-matters video game rather than a life lesson in this perspective, its endings are rather mundane and the storyline doesn’t subvert any expectations. It almost falls to the level of dating-sims and other visual novels, in that if you don’t upset Emily/Evelyn too much and play the nice-guy card, you ride into the sunset with her in a Disney-style ending.</p>
-<p>The nostalgia of the game is still strong, especially with bands like Senses Fail and Linkin Park showing up for alternative music fans like me. However, there isn’t much more than that beyond the retro style interface of Emily is Away Too. There’s only so many ways to write a teenage high-school story, and unfortunately Emily is Away Too falls on the bottom half of the pile.</p>
-<p>Verdict: 6 has-been pop punk bands out of 10</p>
-<p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/">Emily is Away Too is available on Steam</a></p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
-        <tag>Reviews</tag>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -45,34 +41,6 @@
 ]]></content>
       <tags>
         <tag>Hardware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Review: Emily is Away</title>
-    <url>/2020/02/17/emily-is-away/</url>
-    <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
-<span id="more"></span>
-
-<p>Part time machine, part nostalgia trip - Emily is Away is a text-based game that harks back to the early days of the Internet. The gameplay features a mock-up of AOL instant messenger in a Window XP operating system, where you could change your text colour to lime green and put up ‘edgy’ emo quotes on your profile page. The story is one of high school romance which players can (hopefully) relate to. While it does seem to be uneventful and too slice-of-life to start with, the final chapter (2006) is where Emily is Away truly begins to shine. Seeing the protagonist revising genuine, heartaching questions in favour of mundane, how-is-the-weather chit-chat feels like being hit by a semi-truck as the conversation/story comes to an awkward end with the protagonist logging off earlier than Emily does, for the first time in the game.</p>
-<p>In some ways, Emily is Away is a hardcore age-check for the playerbase. It is clearly designed from a millennial’s perspective, with references to pop culture (blink-182, anyone?) that ‘kids these days’ wouldn’t understand. It’s almost a massive inside joke for people who went to high school during the early 2000s to some extent.</p>
-<p>But behind all those throwback profile pictures and dial-up Internet noises, Emily is Away divides its critics by revolving the story around something only people above a certain age experienced: No friendship lasts forever. The people you hang out with would eventually grow distant as your life paths diverge. Despite the protagonist’s clear, romantic intentions towards Emily, she no longer cares. It is brutal and emotionally devastating, but one day we would all abandon our friends, youth and memories just like we abandoned AOL instant messenger. And that’s where the age-check comes in, reminding you that it’s time to grow up and stop wondering about what-could-have-been.</p>
-<p>Verdict: 8.7 Windows Sticky Notes out of 10</p>
-<p><a href="https://store.steampowered.com/app/417860/Emily_is_Away/">Emily is Away is available on Steam</a></p>
-]]></content>
-      <tags>
-        <tag>Reviews</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -162,6 +130,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<span id="more"></span>
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+      <tags>
+        <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Operating System</title>
     <url>/2019/09/20/os/</url>
     <content><![CDATA[<p>An operating system is a program or a set of programs that manages the operations of the computer for the user. It acts as a bridge between the user and the computer’s hardware.</p>
@@ -206,19 +187,6 @@
 <li>Separate processes into categories based on their need for the processor</li>
 </ul>
 <p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
