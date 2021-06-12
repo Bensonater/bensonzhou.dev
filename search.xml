@@ -95,39 +95,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Optimisation Algorithms</title>
-    <url>/2019/10/08/optimisation-algorithms/</url>
-    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
-<span id="more"></span>
-
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Review: Emily is Away</title>
     <url>/2020/02/17/emily-is-away/</url>
     <content><![CDATA[<p>Hardcore age-check disguised as a video game.</p>
@@ -156,6 +123,18 @@
 </ul>
 <p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
 <h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">merge_sort</span>(<span class="params">merge_list</span>):</span></span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(merge_list) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(merge_list) // <span class="number">2</span></span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            <span class="keyword">if</span> lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line">merge_sort(a)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -212,6 +191,27 @@
       </tags>
   </entry>
   <entry>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+<span id="more"></span>
+
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Page Rank Algorithm</title>
     <url>/2019/09/27/page-rank/</url>
     <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
@@ -231,6 +231,19 @@
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<span id="more"></span>
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+      <tags>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -258,19 +271,6 @@
 ]]></content>
       <tags>
         <tag>Hardware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
