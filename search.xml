@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>CPU Components</title>
     <url>/2019/09/20/CPU-components/</url>
     <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
@@ -67,15 +79,19 @@
       </tags>
   </entry>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+    <title>Review: Emily is Away Too</title>
+    <url>/2020/02/17/emily-is-away-too/</url>
+    <content><![CDATA[<p>There’s only so many ways to write a high-school drama.</p>
 <span id="more"></span>
 
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+<p>It’s generally frowned upon to re-badge a merchandise under a different name and sell it pretending it’s something new, but if it’s nostalgia we eat it all up anyways. This is what’s going on with Emily is Away Too. Despite having a similar storyline and playstyle with the first game, the sequel couldn’t quite deliver the emotional impact of its predecessor and no amount of low-pixel avatars is going to redeem it.</p>
+<p>One major factor for the magic of Emily is Away is that there are no happy endings in that game. No matter how desperate the player is at getting Emily back, she just doesn’t care anymore and decides to move on. It illustrates how friendships break down due to long distance or coming-of-age in real life. While Emily is Away Too definitely feels more like a choice-matters video game rather than a life lesson in this perspective, its endings are rather mundane and the storyline doesn’t subvert any expectations. It almost falls to the level of dating-sims and other visual novels, in that if you don’t upset Emily/Evelyn too much and play the nice-guy card, you ride into the sunset with her in a Disney-style ending.</p>
+<p>The nostalgia of the game is still strong, especially with bands like Senses Fail and Linkin Park showing up for alternative music fans like me. However, there isn’t much more than that beyond the retro style interface of Emily is Away Too. There’s only so many ways to write a teenage high-school story, and unfortunately Emily is Away Too falls on the bottom half of the pile.</p>
+<p>Verdict: 6 has-been pop punk bands out of 10</p>
+<p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/">Emily is Away Too is available on Steam</a></p>
 ]]></content>
       <tags>
-        <tag>Algorithms</tag>
+        <tag>Reviews</tag>
       </tags>
   </entry>
   <entry>
@@ -91,19 +107,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Review: Emily is Away Too</title>
-    <url>/2020/02/17/emily-is-away-too/</url>
-    <content><![CDATA[<p>There’s only so many ways to write a high-school drama.</p>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
 <span id="more"></span>
 
-<p>It’s generally frowned upon to re-badge a merchandise under a different name and sell it pretending it’s something new, but if it’s nostalgia we eat it all up anyways. This is what’s going on with Emily is Away Too. Despite having a similar storyline and playstyle with the first game, the sequel couldn’t quite deliver the emotional impact of its predecessor and no amount of low-pixel avatars is going to redeem it.</p>
-<p>One major factor for the magic of Emily is Away is that there are no happy endings in that game. No matter how desperate the player is at getting Emily back, she just doesn’t care anymore and decides to move on. It illustrates how friendships break down due to long distance or coming-of-age in real life. While Emily is Away Too definitely feels more like a choice-matters video game rather than a life lesson in this perspective, its endings are rather mundane and the storyline doesn’t subvert any expectations. It almost falls to the level of dating-sims and other visual novels, in that if you don’t upset Emily/Evelyn too much and play the nice-guy card, you ride into the sunset with her in a Disney-style ending.</p>
-<p>The nostalgia of the game is still strong, especially with bands like Senses Fail and Linkin Park showing up for alternative music fans like me. However, there isn’t much more than that beyond the retro style interface of Emily is Away Too. There’s only so many ways to write a teenage high-school story, and unfortunately Emily is Away Too falls on the bottom half of the pile.</p>
-<p>Verdict: 6 has-been pop punk bands out of 10</p>
-<p><a href="https://store.steampowered.com/app/523780/Emily_is_Away_Too/">Emily is Away Too is available on Steam</a></p>
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
 ]]></content>
       <tags>
-        <tag>Reviews</tag>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -141,24 +162,53 @@
       </tags>
   </entry>
   <entry>
-    <title>Optimisation Algorithms</title>
-    <url>/2019/10/08/optimisation-algorithms/</url>
-    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+    <title>Operating System</title>
+    <url>/2019/09/20/os/</url>
+    <content><![CDATA[<p>An operating system is a program or a set of programs that manages the operations of the computer for the user. It acts as a bridge between the user and the computer’s hardware.</p>
 <span id="more"></span>
 
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
+<p>The functions of an OS are:</p>
+<ul>
+<li>Memory management</li>
+<li>Interrupt service routines</li>
+<li>Processor scheduling</li>
+<li>Backing store management</li>
+<li>Management of all input and output</li>
+</ul>
+<h2 id="Paging-and-segmentation"><a href="#Paging-and-segmentation" class="headerlink" title="Paging and segmentation"></a>Paging and segmentation</h2><p>These are two different techniques for making the optimum use of memory by splitting it into small sections.</p>
+<p>In a paging system, memory is divided into fixed size pages of 4Kb each, and a process currently in memory may be held in several non-contiguous pages. This means the logical memory slots next to each other may be physically stored in anywhere in the memory space. A page table uses mapping to store a link between the physical memory address and the logical address of each process.</p>
+<p>Segmentation is the logical division of address space into varying length segments which depend on the program structure. As with paging, it is possible to load only a part of a program into memory initially.</p>
+<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I/O operation is complete or an error occurs.</p>
+<p>Interrupts are also regularly triggered by a timer, to indicate that it is the turn of the next process to have processor time. This is for multi-tasking to take place.</p>
+<h3 id="Interrupts-service-routines"><a href="#Interrupts-service-routines" class="headerlink" title="Interrupts service routines"></a>Interrupts service routines</h3><p>When the CPU receives an interrupt signal, an interrupt service routine is called to deal with the interrupt. Depending on the type of interrupt, a particular routine will be run in order to service it. Interrupts have different priorities and low priority interrupt may be disabled while a higher priority interrupt is been serviced. Examples of interrupts in descending order of priority are given below:</p>
+<ul>
+<li>Power-fail interrupt</li>
+<li>Clock interrupt</li>
+<li>An I/O device sends a signal requesting service or signalling end of I/O operation</li>
+</ul>
+<h2 id="Processor-scheduling"><a href="#Processor-scheduling" class="headerlink" title="Processor scheduling"></a>Processor scheduling</h2><p>With computers able to run multiple applications simultaneously, the operating system is responsible for allocating processor time to each one as they compete for the CPU. While one application is busy using CPU for processing, the OS can queue up the next process required by another application to make the most efficient use of the processor. By carrying out small parts of multiple larger tasks in turn, the processor can carry out several tasks simultaneously. This is what is meant by multitasking.</p>
+<p>The Scheduler is the operating system module responsible for making sure that processor time is used as efficiently as possible. The objectives of the scheduler are to:</p>
+<ul>
+<li>Maximise throughput</li>
+<li>Be fair to all users</li>
+<li>Provide acceptable response time to all users</li>
+<li>Ensure hardware resources are kept as busy as possible</li>
+<li>There are many different scheduling algorithms and some of them are described below.</li>
+</ul>
+<h3 id="Round-Robin"><a href="#Round-Robin" class="headerlink" title="Round Robin"></a>Round Robin</h3><p>In Round robin scheduling, processes are dispatched on a first in first out basis, with each process in turn being given a limited amount of CPU time called a time slice. If the process does not complete before its time expires, or before a higher priority interrupt occurs, the dispatcher gives the CPU to the next process.</p>
+<p>In order to do this, the operating system has a interval timer to generate interrupts at specific times.</p>
+<h3 id="First-come-first-served"><a href="#First-come-first-served" class="headerlink" title="First come first served"></a>First come first served</h3><p>Jobs are processed in the order in which they arrive, with no system of priorities.</p>
+<h3 id="Shortest-remaining-time"><a href="#Shortest-remaining-time" class="headerlink" title="Shortest remaining time"></a>Shortest remaining time</h3><p>The process with the smallest estimated time remaining is run next. However, the disadvantage is that the user has to estimate the job time.</p>
+<h3 id="Multi-level-feedback-queues"><a href="#Multi-level-feedback-queues" class="headerlink" title="Multi-level feedback queues"></a>Multi-level feedback queues</h3><p>The algorithm is designed to:</p>
+<ul>
+<li>Give preference to short jobs</li>
+<li>Give preference to I/O bound processes</li>
+<li>Separate processes into categories based on their need for the processor</li>
+</ul>
+<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
 ]]></content>
       <tags>
-        <tag>Algorithms</tag>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -211,53 +261,45 @@
       </tags>
   </entry>
   <entry>
-    <title>Operating System</title>
-    <url>/2019/09/20/os/</url>
-    <content><![CDATA[<p>An operating system is a program or a set of programs that manages the operations of the computer for the user. It acts as a bridge between the user and the computer’s hardware.</p>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
 <span id="more"></span>
 
-<p>The functions of an OS are:</p>
-<ul>
-<li>Memory management</li>
-<li>Interrupt service routines</li>
-<li>Processor scheduling</li>
-<li>Backing store management</li>
-<li>Management of all input and output</li>
-</ul>
-<h2 id="Paging-and-segmentation"><a href="#Paging-and-segmentation" class="headerlink" title="Paging and segmentation"></a>Paging and segmentation</h2><p>These are two different techniques for making the optimum use of memory by splitting it into small sections.</p>
-<p>In a paging system, memory is divided into fixed size pages of 4Kb each, and a process currently in memory may be held in several non-contiguous pages. This means the logical memory slots next to each other may be physically stored in anywhere in the memory space. A page table uses mapping to store a link between the physical memory address and the logical address of each process.</p>
-<p>Segmentation is the logical division of address space into varying length segments which depend on the program structure. As with paging, it is possible to load only a part of a program into memory initially.</p>
-<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I/O operation is complete or an error occurs.</p>
-<p>Interrupts are also regularly triggered by a timer, to indicate that it is the turn of the next process to have processor time. This is for multi-tasking to take place.</p>
-<h3 id="Interrupts-service-routines"><a href="#Interrupts-service-routines" class="headerlink" title="Interrupts service routines"></a>Interrupts service routines</h3><p>When the CPU receives an interrupt signal, an interrupt service routine is called to deal with the interrupt. Depending on the type of interrupt, a particular routine will be run in order to service it. Interrupts have different priorities and low priority interrupt may be disabled while a higher priority interrupt is been serviced. Examples of interrupts in descending order of priority are given below:</p>
-<ul>
-<li>Power-fail interrupt</li>
-<li>Clock interrupt</li>
-<li>An I/O device sends a signal requesting service or signalling end of I/O operation</li>
-</ul>
-<h2 id="Processor-scheduling"><a href="#Processor-scheduling" class="headerlink" title="Processor scheduling"></a>Processor scheduling</h2><p>With computers able to run multiple applications simultaneously, the operating system is responsible for allocating processor time to each one as they compete for the CPU. While one application is busy using CPU for processing, the OS can queue up the next process required by another application to make the most efficient use of the processor. By carrying out small parts of multiple larger tasks in turn, the processor can carry out several tasks simultaneously. This is what is meant by multitasking.</p>
-<p>The Scheduler is the operating system module responsible for making sure that processor time is used as efficiently as possible. The objectives of the scheduler are to:</p>
-<ul>
-<li>Maximise throughput</li>
-<li>Be fair to all users</li>
-<li>Provide acceptable response time to all users</li>
-<li>Ensure hardware resources are kept as busy as possible</li>
-<li>There are many different scheduling algorithms and some of them are described below.</li>
-</ul>
-<h3 id="Round-Robin"><a href="#Round-Robin" class="headerlink" title="Round Robin"></a>Round Robin</h3><p>In Round robin scheduling, processes are dispatched on a first in first out basis, with each process in turn being given a limited amount of CPU time called a time slice. If the process does not complete before its time expires, or before a higher priority interrupt occurs, the dispatcher gives the CPU to the next process.</p>
-<p>In order to do this, the operating system has a interval timer to generate interrupts at specific times.</p>
-<h3 id="First-come-first-served"><a href="#First-come-first-served" class="headerlink" title="First come first served"></a>First come first served</h3><p>Jobs are processed in the order in which they arrive, with no system of priorities.</p>
-<h3 id="Shortest-remaining-time"><a href="#Shortest-remaining-time" class="headerlink" title="Shortest remaining time"></a>Shortest remaining time</h3><p>The process with the smallest estimated time remaining is run next. However, the disadvantage is that the user has to estimate the job time.</p>
-<h3 id="Multi-level-feedback-queues"><a href="#Multi-level-feedback-queues" class="headerlink" title="Multi-level feedback queues"></a>Multi-level feedback queues</h3><p>The algorithm is designed to:</p>
-<ul>
-<li>Give preference to short jobs</li>
-<li>Give preference to I/O bound processes</li>
-<li>Separate processes into categories based on their need for the processor</li>
-</ul>
-<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<span id="more"></span>
+
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -349,19 +391,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Time Complexities</title>
     <url>/2019/09/20/time-complexities/</url>
     <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
@@ -399,35 +428,6 @@
 <li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
 <li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
 </ul>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Quick Sort</title>
-    <url>/2019/09/21/quick-sort/</url>
-    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<span id="more"></span>
-
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
