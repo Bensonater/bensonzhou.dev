@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"bensonater.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":true,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="Relational database, normalisation and more">
+  <meta name="description" content="Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Database">
-<meta property="og:url" content="https://bensonater.github.io/2019/11/16/database/index.html">
+<meta property="og:title" content="Getting started with Anaconda and Jupyter Notebook">
+<meta property="og:url" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/index.html">
 <meta property="og:site_name" content="Return 0">
-<meta property="og:description" content="Relational database, normalisation and more">
+<meta property="og:description" content="Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2019-11-16T02:33:05.000Z">
-<meta property="article:modified_time" content="2020-02-17T20:22:02.380Z">
+<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
+<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/terminal.png">
+<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png">
+<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/shutdown.png">
+<meta property="article:published_time" content="2021-07-05T15:12:20.000Z">
+<meta property="article:modified_time" content="2021-07-05T15:28:52.691Z">
 <meta property="article:author" content="Benson Zhou">
-<meta property="article:tag" content="CS Theory">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
 
-<link rel="canonical" href="https://bensonater.github.io/2019/11/16/database/">
+<link rel="canonical" href="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>Database | Return 0</title>
+  <title>Getting started with Anaconda and Jupyter Notebook | Return 0</title>
   
 
 
@@ -186,7 +190,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
-    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2019/11/16/database/">
+    <link itemprop="mainEntityOfPage" href="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -199,7 +203,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Database
+          Getting started with Anaconda and Jupyter Notebook
         </h1>
 
         <div class="post-meta">
@@ -208,16 +212,10 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
+              
 
-              <time title="Created: 2019-11-16 10:33:05" itemprop="dateCreated datePublished" datetime="2019-11-16T10:33:05+08:00">2019-11-16</time>
+              <time title="Created: 2021-07-05 23:12:20 / Modified: 23:28:52" itemprop="dateCreated datePublished" datetime="2021-07-05T23:12:20+08:00">2021-07-05</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2020-02-18 04:22:02" itemprop="dateModified" datetime="2020-02-18T04:22:02+08:00">2020-02-18</time>
-              </span>
 
           
 
@@ -230,33 +228,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Relational database, normalisation and more</p>
+        <p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
 <span id="more"></span>
 
-<h2 id="Relational-Database"><a href="#Relational-Database" class="headerlink" title="Relational Database"></a>Relational Database</h2><p>In a relational database, a separate table is created for each entity identified in the system. Where a relationship exists between entities, an extra field called a foreign key links the two tables.</p>
-<h3 id="Foreign-Key"><a href="#Foreign-Key" class="headerlink" title="Foreign Key"></a>Foreign Key</h3><p>A foreign key is an attribute that creates a join between two tables. It is the attribute that is common to both tables, and the primary key in one table is the foreign key in the table to which it is linked.</p>
-<h3 id="Composite-Key"><a href="#Composite-Key" class="headerlink" title="Composite Key"></a>Composite Key</h3><p>In this data model, the table linking Student and Course has two foreign keys, each linking to one of the two main tables. The two foreign keys also act as the primary key of this table. A primary key which consists of more than one attribute is called a composite primary key.</p>
-<h2 id="Relational-Database-Design"><a href="#Relational-Database-Design" class="headerlink" title="Relational Database Design"></a>Relational Database Design</h2><p>In a relational database, data is held in tables (also called relations) and the tables are linked by means of common attributes. A relational database is a collection of tables in which relationships are modelled by shared attributes. Conceptually then, one row of a table holds one record. Each column in the table represents one attribute.</p>
-<p>An example of a table would be: Book (<strong>BookID</strong>, DeweyCode, Title, Author, DatePublished)<br>Note that:</p>
-<ul>
-<li>The entity name is shown outside the brackets</li>
-<li>The attributes are listed inside the brackets</li>
-<li>The primary key is in bold<br>The primary key is composed of one or more attributes that will uniquely identify a particular record in the table.</li>
-</ul>
-<h3 id="Indexing"><a href="#Indexing" class="headerlink" title="Indexing"></a>Indexing</h3><p>In order that a record with a particular primary key can be quickly located in a database, an index of primary keys will be automatically maintained by the database software, giving the position of each record according to its primary key.</p>
-<p>One or more secondary indexes may be defined when the database is created, for any attribute that is often used as a search criterion. This would speed up searches on either of these fields, which would otherwise have to be searched sequentially.</p>
-<h3 id="Linking-Database-Tables"><a href="#Linking-Database-Tables" class="headerlink" title="Linking Database Tables"></a>Linking Database Tables</h3><p>Tables may be linked through the use of a common attribute. This attribute must be a primary key of one of the tables, and is known as a foreign key in the second table.</p>
-<h2 id="Normalisation"><a href="#Normalisation" class="headerlink" title="Normalisation"></a>Normalisation</h2><p>Normalisation is a process used to come up with the best possible design for a relational database. Tables should be organised in such a way that:</p>
-<ul>
-<li>No data is unnecessarily duplicated (i.e. the same data item held in more than one table)</li>
-<li>Data is consistent throughout the database (e.g. a customer is not recorded as having different addresses in different tables of the database). Consistency should be    an automatic consequence of not holding any duplicated data. This means that anomalies will not arise when data is inserted, amended or deleted.</li>
-<li>The structure of each table is flexible enough to allow you to enter as many or as few items (for example, components making up a product) as required</li>
-<li>The structure should enable a user to make all kinds of complex queries relating data from different tables</li>
-</ul>
-<p>There are three basic stages of normalisation known as first, second and third normal form.</p>
-<h3 id="First-Normal-Form"><a href="#First-Normal-Form" class="headerlink" title="First Normal Form"></a>First Normal Form</h3><p>A table is in first normal form (1NF) if it contains no repeating attribute or groups of attributes.</p>
-<h3 id="Second-Normal-Form-Partial-Key-Dependence-Test"><a href="#Second-Normal-Form-Partial-Key-Dependence-Test" class="headerlink" title="Second Normal Form - Partial Key Dependence Test"></a>Second Normal Form - Partial Key Dependence Test</h3><p>A table is in second normal form (2NF) if it is in first normal form and contains no partial dependencies. A partial dependency would mean that one or more of the attributes depends on only part of the primary key, which can only occur if the primary key is a composite key.</p>
-<h3 id="Third-Normal-Form-Non-Key-Dependence-Test"><a href="#Third-Normal-Form-Non-Key-Dependence-Test" class="headerlink" title="Third Normal Form - Non-Key Dependence Test"></a>Third Normal Form - Non-Key Dependence Test</h3><p>A table is in third normal form (3NF) if it is in second normal form and contains no ‘non-key dependencies’. A non-key dependency is one where the value of an attribute is determined by the value of another attribute which is not part of the key.<br>3NF means that:<br>All attributes are dependent on the key, the whole key, and nothing but the key.</p>
+<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
+<p><img src="download.png" alt="Click on the green download button for the installer. "></p>
+<p>Run the installer and follow the instructions. </p>
+<h2 id="Testing-Anaconda"><a href="#Testing-Anaconda" class="headerlink" title="Testing Anaconda"></a>Testing Anaconda</h2><p>On Windows,  Alternatively, you could open a new cmd or powershell window and run:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
+
+<p>On macOS, open a new terminal window and run:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
+
+<p>You should see something similar to this.</p>
+<p><img src="terminal.png" alt="What the terminal output should look like. "></p>
+<p>This means that Anaconda has been successfully installed on your computer and added to the environment variables. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It should come pre-installed with your Anaconda files. You can verify this by running the following command in the Powershell/Terminal window:</p>
+<p>On Windows, Anaconda will add a shortcut to Jupyter Notebook in your start menu. Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed. </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>This will start the notebook server and open a new tab in your default browser. </p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown individual notebook sessions. Find the “Running” tab on the Notebook webpage, or <a target="_blank" rel="noopener" href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. They can be closed by clicking on the button on the right. Closing one Notebook session will not affect the others. </p>
+<p> <img src="running.png" alt="A single notebook instance being run. "></p>
+<p> If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C to terminate the process. </p>
+<p> <img src="shutdown.png" alt="Terminal prompt to terminate the process. "></p>
+<p> Type ‘y’ to confirm. </p>
 
     </div>
 
@@ -265,9 +261,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/source/tags/CS-Theory/" rel="tag"># CS Theory</a>
-          </div>
 
         
 
@@ -275,13 +268,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2019/11/11/problem-solving/" rel="prev" title="Problem Solving">
-      <i class="fa fa-chevron-left"></i> Problem Solving
+    <a href="/2019/11/16/database/" rel="prev" title="Database">
+      <i class="fa fa-chevron-left"></i> Database
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/" rel="next" title="Getting started with Anaconda and Jupyter Notebook">
-      Getting started with Anaconda and Jupyter Notebook <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -340,7 +330,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Relational-Database"><span class="nav-number">1.</span> <span class="nav-text">Relational Database</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Foreign-Key"><span class="nav-number">1.1.</span> <span class="nav-text">Foreign Key</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Composite-Key"><span class="nav-number">1.2.</span> <span class="nav-text">Composite Key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Relational-Database-Design"><span class="nav-number">2.</span> <span class="nav-text">Relational Database Design</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Indexing"><span class="nav-number">2.1.</span> <span class="nav-text">Indexing</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linking-Database-Tables"><span class="nav-number">2.2.</span> <span class="nav-text">Linking Database Tables</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Normalisation"><span class="nav-number">3.</span> <span class="nav-text">Normalisation</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Normal-Form"><span class="nav-number">3.1.</span> <span class="nav-text">First Normal Form</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Second-Normal-Form-Partial-Key-Dependence-Test"><span class="nav-number">3.2.</span> <span class="nav-text">Second Normal Form - Partial Key Dependence Test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Third-Normal-Form-Non-Key-Dependence-Test"><span class="nav-number">3.3.</span> <span class="nav-text">Third Normal Form - Non-Key Dependence Test</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">Installing Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Anaconda"><span class="nav-number">2.</span> <span class="nav-text">Testing Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Jupyter-Notebook"><span class="nav-number">3.</span> <span class="nav-text">Testing Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Jupyter-Notebook"><span class="nav-number">4.</span> <span class="nav-text">Using Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminating-a-Notebook-session"><span class="nav-number">5.</span> <span class="nav-text">Terminating a Notebook session</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
