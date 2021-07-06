@@ -30,10 +30,10 @@
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/terminal.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png">
+<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png">
-<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/shutdown.png">
 <meta property="article:published_time" content="2021-07-05T15:12:20.000Z">
-<meta property="article:modified_time" content="2021-07-05T15:43:23.732Z">
+<meta property="article:modified_time" content="2021-07-06T00:45:40.523Z">
 <meta property="article:author" content="Benson Zhou">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
@@ -213,10 +213,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2021-07-05 23:12:20 / Modified: 23:43:23" itemprop="dateCreated datePublished" datetime="2021-07-05T23:12:20+08:00">2021-07-05</time>
+              <time title="Created: 2021-07-05 23:12:20" itemprop="dateCreated datePublished" datetime="2021-07-05T23:12:20+08:00">2021-07-05</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2021-07-06 08:45:40" itemprop="dateModified" datetime="2021-07-06T08:45:40+08:00">2021-07-06</time>
+              </span>
 
           
 
@@ -248,21 +254,23 @@
 <p>On Windows, Anaconda will add a shortcut to Jupyter Notebook in your start menu. Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed. </p>
 <p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
 <p>To navigate to a certain directory in Powershell/Terminal, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;target directory&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;target directory&quot;</span><br></pre></td></tr></table></figure>
 
 <p>For example, to navigate to a folder called “coding” in the E drive on Windows, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;E:\coding&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;E:\coding&quot;</span><br></pre></td></tr></table></figure>
 
 <p>After you have reached the working directory, run:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 
 <p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a target="_blank" rel="noopener" href="https://localhost:8888/tree">this</a>.</p>
 <p><img src="jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
-<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown individual notebook sessions. Find the “Running” tab on the Notebook webpage, or <a target="_blank" rel="noopener" href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. They can be closed by clicking on the button on the right. Closing one Notebook session will not affect the others. </p>
-<p> <img src="running.png" alt="A single notebook instance being run. "></p>
-<p> If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C to terminate the process. </p>
-<p> <img src="shutdown.png" alt="Terminal prompt to terminate the process. "></p>
-<p> Type ‘y’ to confirm. </p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
+<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
+<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
+<p><img src="python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a target="_blank" rel="noopener" href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="running.png" alt="A single notebook instance being run. "></p>
+<p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
 
     </div>
 

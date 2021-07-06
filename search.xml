@@ -32,6 +32,59 @@
       </tags>
   </entry>
   <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Getting started with Anaconda and Jupyter Notebook</title>
+    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
+    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
+<span id="more"></span>
+
+<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
+<p><img src="download.png" alt="Click on the green download button for the installer. "></p>
+<p>Run the installer and follow the instructions. </p>
+<h2 id="Testing-Anaconda"><a href="#Testing-Anaconda" class="headerlink" title="Testing Anaconda"></a>Testing Anaconda</h2><p>On Windows, open a new cmd or powershell window and run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
+
+<p>On macOS, open a new terminal window and run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
+
+<p>You should see something similar to this.</p>
+<p><img src="terminal.png" alt="What the terminal output should look like. "></p>
+<p>This means that Anaconda has been successfully installed on your computer and added to the environment variables. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. Anaconda will automatically install Jupyter Notebook on your computer. </p>
+<p>On Windows, Anaconda will add a shortcut to Jupyter Notebook in your start menu. Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed. </p>
+<p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
+<p>To navigate to a certain directory in Powershell/Terminal, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd &quot;target directory&quot;</span><br></pre></td></tr></table></figure>
+
+<p>For example, to navigate to a folder called “coding” in the E drive on Windows, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd &quot;E:\coding&quot;</span><br></pre></td></tr></table></figure>
+
+<p>After you have reached the working directory, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
+<p><img src="jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
+<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
+<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
+<p><img src="python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="running.png" alt="A single notebook instance being run. "></p>
+<p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
+]]></content>
+  </entry>
+  <entry>
     <title>Database</title>
     <url>/2019/11/16/database/</url>
     <content><![CDATA[<p>Relational database, normalisation and more</p>
@@ -64,57 +117,6 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Getting started with Anaconda and Jupyter Notebook</title>
-    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
-    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
-<span id="more"></span>
-
-<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
-<p><img src="download.png" alt="Click on the green download button for the installer. "></p>
-<p>Run the installer and follow the instructions. </p>
-<h2 id="Testing-Anaconda"><a href="#Testing-Anaconda" class="headerlink" title="Testing Anaconda"></a>Testing Anaconda</h2><p>On Windows, open a new cmd or powershell window and run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
-
-<p>On macOS, open a new terminal window and run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
-
-<p>You should see something similar to this.</p>
-<p><img src="terminal.png" alt="What the terminal output should look like. "></p>
-<p>This means that Anaconda has been successfully installed on your computer and added to the environment variables. </p>
-<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. Anaconda will automatically install Jupyter Notebook on your computer. </p>
-<p>On Windows, Anaconda will add a shortcut to Jupyter Notebook in your start menu. Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed. </p>
-<p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
-<p>To navigate to a certain directory in Powershell/Terminal, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd &quot;target directory&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>For example, to navigate to a folder called “coding” in the E drive on Windows, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd &quot;E:\coding&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>After you have reached the working directory, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
-
-<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
-<p><img src="jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
-<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown individual notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. They can be closed by clicking on the button on the right. Closing one Notebook session will not affect the others. </p>
-<p> <img src="running.png" alt="A single notebook instance being run. "></p>
-<p> If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C to terminate the process. </p>
-<p> <img src="shutdown.png" alt="Terminal prompt to terminate the process. "></p>
-<p> Type ‘y’ to confirm. </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -219,19 +221,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Page Rank Algorithm</title>
     <url>/2019/09/27/page-rank/</url>
     <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
@@ -307,6 +296,19 @@
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<span id="more"></span>
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+      <tags>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
