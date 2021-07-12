@@ -28,12 +28,11 @@
 <meta property="og:description" content="Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
-<meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/terminal.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png">
 <meta property="og:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png">
 <meta property="article:published_time" content="2021-07-05T15:12:20.000Z">
-<meta property="article:modified_time" content="2021-07-06T00:45:40.523Z">
+<meta property="article:modified_time" content="2021-07-12T06:03:30.870Z">
 <meta property="article:author" content="Benson Zhou">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://bensonater.github.io/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png">
@@ -221,7 +220,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-07-06 08:45:40" itemprop="dateModified" datetime="2021-07-06T08:45:40+08:00">2021-07-06</time>
+                <time title="Modified: 2021-07-12 14:03:30" itemprop="dateModified" datetime="2021-07-12T14:03:30+08:00">2021-07-12</time>
               </span>
 
           
@@ -241,29 +240,17 @@
 <h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a target="_blank" rel="noopener" href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
 <p><img src="download.png" alt="Click on the green download button for the installer. "></p>
 <p>Run the installer and follow the instructions. </p>
-<h2 id="Testing-Anaconda"><a href="#Testing-Anaconda" class="headerlink" title="Testing Anaconda"></a>Testing Anaconda</h2><p>On Windows, open a new cmd or powershell window and run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
-
-<p>On macOS, open a new terminal window and run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda</span><br></pre></td></tr></table></figure>
-
-<p>You should see something similar to this.</p>
-<p><img src="terminal.png" alt="What the terminal output should look like. "></p>
-<p>This means that Anaconda has been successfully installed on your computer and added to the environment variables. </p>
-<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. Anaconda will automatically install Jupyter Notebook on your computer. </p>
-<p>On Windows, Anaconda will add a shortcut to Jupyter Notebook in your start menu. Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
+<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
+<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
 <p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
-<p>To navigate to a certain directory in Powershell/Terminal, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;target directory&quot;</span><br></pre></td></tr></table></figure>
-
-<p>For example, to navigate to a folder called “coding” in the E drive on Windows, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &quot;E:\coding&quot;</span><br></pre></td></tr></table></figure>
-
-<p>After you have reached the working directory, run:</p>
+<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
+<p>In Powershell, run:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 
 <p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a target="_blank" rel="noopener" href="https://localhost:8888/tree">this</a>.</p>
 <p><img src="jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
 <h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
 <p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
 <p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
@@ -348,7 +335,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">Installing Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Anaconda"><span class="nav-number">2.</span> <span class="nav-text">Testing Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Jupyter-Notebook"><span class="nav-number">3.</span> <span class="nav-text">Testing Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Jupyter-Notebook"><span class="nav-number">4.</span> <span class="nav-text">Using Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminating-a-Notebook-session"><span class="nav-number">5.</span> <span class="nav-text">Terminating a Notebook session</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Installing-Anaconda"><span class="nav-number">1.</span> <span class="nav-text">Installing Anaconda</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Jupyter-Notebook"><span class="nav-number">2.</span> <span class="nav-text">Testing Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Using-Jupyter-Notebook"><span class="nav-number">3.</span> <span class="nav-text">Using Jupyter Notebook</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Terminating-a-Notebook-session"><span class="nav-number">4.</span> <span class="nav-text">Terminating a Notebook session</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
