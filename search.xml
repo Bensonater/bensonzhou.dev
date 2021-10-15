@@ -61,30 +61,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Database</title>
     <url>/2019/11/16/database/</url>
     <content><![CDATA[<p>Relational database, normalisation and more</p>
@@ -117,6 +93,30 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -209,6 +209,19 @@
       </tags>
   </entry>
   <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<span id="more"></span>
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+      <tags>
+        <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Page Rank Algorithm</title>
     <url>/2019/09/27/page-rank/</url>
     <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
@@ -228,19 +241,6 @@
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -268,35 +268,6 @@
 ]]></content>
       <tags>
         <tag>Hardware</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Quick Sort</title>
-    <url>/2019/09/21/quick-sort/</url>
-    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<span id="more"></span>
-
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -428,6 +399,35 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<span id="more"></span>
+
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
 </search>
