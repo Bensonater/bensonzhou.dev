@@ -38,7 +38,7 @@
 <span id="more"></span>
 
 <h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
-<p><img src="download.png" alt="Click on the green download button for the installer. "></p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
 <p>Run the installer and follow the instructions. </p>
 <h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
 <p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
@@ -49,16 +49,28 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
 
 <p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
-<p><img src="jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
 <p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
 <h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
 <p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
 <p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
-<p><img src="python.png" alt="Hello World Program"></p>
-<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree?#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
-<p><img src="running.png" alt="A single notebook instance being run. "></p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
 <p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Bubble Sort</title>
+    <url>/2019/09/20/bubble-sort/</url>
+    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
   </entry>
   <entry>
     <title>Database</title>
@@ -108,18 +120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Bubble Sort</title>
-    <url>/2019/09/20/bubble-sort/</url>
-    <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Merge Sort</title>
     <url>/2019/09/21/merge-sort/</url>
     <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
@@ -153,6 +153,28 @@
 <li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
 </ol>
 <p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Page Rank Algorithm</title>
+    <url>/2019/09/27/page-rank/</url>
+    <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
+<span id="more"></span>
+
+<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
+<p>The PageRank algorithm itself is defined as:</p>
+<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>where:</p>
+<ul>
+<li>PR(A) is the PageRank of page A</li>
+<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
+<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
+</ul>
+<p>The PageRank of a page is constantly being recalculated and updated.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -222,28 +244,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Page Rank Algorithm</title>
-    <url>/2019/09/27/page-rank/</url>
-    <content><![CDATA[<p>Google’s Page Rank algorithm and how to calculate it</p>
-<span id="more"></span>
-
-<p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
-<p>The PageRank algorithm itself is defined as:</p>
-<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
-<p>where:</p>
-<ul>
-<li>PR(A) is the PageRank of page A</li>
-<li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
-<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
-<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
-</ul>
-<p>The PageRank of a page is constantly being recalculated and updated.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Processor Performance</title>
     <url>/2019/09/20/processor-performance/</url>
     <content><![CDATA[<p>What makes some processor faster than others?</p>
@@ -271,24 +271,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Time Complexities</title>
-    <url>/2019/09/20/time-complexities/</url>
-    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
+    <title>Quick Sort</title>
+    <url>/2019/09/21/quick-sort/</url>
+    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <span id="more"></span>
 
-<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
-<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
-<p>The basic steps are:</p>
-<ul>
-<li>Divide the unsorted list into n sublists, each containing one element</li>
-<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
-</ul>
-<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
-<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <p>The steps in the quick sort are as follows:</p>
 <ul>
 <li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
@@ -301,13 +288,12 @@
 </li>
 </ul>
 <p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
-<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
-<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
-</ul>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
+<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
+<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -402,11 +388,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Quick Sort</title>
-    <url>/2019/09/21/quick-sort/</url>
-    <content><![CDATA[<p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+    <title>Time Complexities</title>
+    <url>/2019/09/20/time-complexities/</url>
+    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
 <span id="more"></span>
 
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <p>The steps in the quick sort are as follows:</p>
 <ul>
 <li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
@@ -419,12 +418,13 @@
 </li>
 </ul>
 <p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">partition</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    pivot = a_list[start]</span><br><span class="line">    left_mark = start + <span class="number">1</span></span><br><span class="line">    right_mark = end</span><br><span class="line">    finished = <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> <span class="keyword">not</span> finished:</span><br><span class="line">        <span class="keyword">while</span> left_mark &lt;= right_mark <span class="keyword">and</span> a_list[left_mark] &lt;= pivot:</span><br><span class="line">            left_mark += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> a_list[right_mark] &gt;= pivot <span class="keyword">and</span> right_mark &gt;= left_mark:</span><br><span class="line">            right_mark -= <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> right_mark &lt; left_mark:</span><br><span class="line">            finished = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            temp = a_list[left_mark]</span><br><span class="line">            a_list[left_mark] = a_list[right_mark]</span><br><span class="line">            a_list[right_mark] = temp</span><br><span class="line"></span><br><span class="line">    temp = a_list[start]</span><br><span class="line">    a_list[start] = a_list[right_mark]</span><br><span class="line">    a_list[right_mark] = temp</span><br><span class="line">    <span class="keyword">return</span> right_mark</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">quick_sort</span>(<span class="params">a_list, start, end</span>):</span></span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        split = partition(a_list, start, end)</span><br><span class="line">        quick_sort(a_list, start, split - <span class="number">1</span>)</span><br><span class="line">        quick_sort(a_list, split + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> a_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">a = [<span class="number">8</span>, <span class="number">5</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">11</span>, <span class="number">7</span>]</span><br><span class="line">sorted_a = quick_sort(a, <span class="number">0</span>, <span class="built_in">len</span>(a)-<span class="number">1</span>)</span><br><span class="line"><span class="built_in">print</span>(sorted_a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Advantages-and-disadvantages-of-the-quick-sort-algorithm"><a href="#Advantages-and-disadvantages-of-the-quick-sort-algorithm" class="headerlink" title="Advantages and disadvantages of the quick sort algorithm"></a>Advantages and disadvantages of the quick sort algorithm</h2><p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<p>Another advantage is that it does not need additional memory, like the merge sort.</p>
-<p>A disadvantage is that if the split points are not near the middle of the list, but are close to the start or end of the list, the division will be very uneven. If the split point is, for example, the first item in the sequenced list, the division results in a list of 0 items and a list of n-1 items. The list of n-1 items divides into 0 items and n-2 items and so on. The resulting time complexity is O(n^2).</p>
-<p>If the list is very large, and recursion continues too long, it may cause stack overflow and the program will crash.</p>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
+<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
+<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
+</ul>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
