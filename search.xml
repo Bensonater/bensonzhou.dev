@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Getting started with Anaconda and Jupyter Notebook</title>
-    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
-    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
-<span id="more"></span>
-
-<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
-<p>Run the installer and follow the instructions. </p>
-<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
-<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
-<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
-<p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
-<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
-<p>In Powershell, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
-
-<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
-<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
-<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
-<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
-<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
-<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
-<p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
-]]></content>
-  </entry>
-  <entry>
     <title>CPU Components</title>
     <url>/2019/09/20/CPU-components/</url>
     <content><![CDATA[<p>The inner workings of a Central Processing Unit.</p>
@@ -61,24 +32,41 @@
       </tags>
   </entry>
   <entry>
+    <title>Getting started with Anaconda and Jupyter Notebook</title>
+    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
+    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
+<span id="more"></span>
+
+<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
+<p>Run the installer and follow the instructions. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
+<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
+<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
+<p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
+<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
+<p>In Powershell, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
+<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
+<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
+<p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
+]]></content>
+  </entry>
+  <entry>
     <title>Bubble Sort</title>
     <url>/2019/09/20/bubble-sort/</url>
     <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
 <span id="more"></span>
 
 <h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">9</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">15</span>, <span class="number">3</span>, <span class="number">8</span>, <span class="number">11</span>, <span class="number">2</span>]</span><br><span class="line"></span><br><span class="line">num_items = <span class="built_in">len</span>(numbers)</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> num_items &gt; <span class="number">1</span>:</span><br><span class="line">    x = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span> x &lt; num_items - <span class="number">1</span>:</span><br><span class="line">        <span class="keyword">if</span> numbers[x] &gt; numbers[x+<span class="number">1</span>]:</span><br><span class="line">            temp = numbers[x]</span><br><span class="line">            numbers[x] = numbers[x+<span class="number">1</span>]</span><br><span class="line">            numbers[x+<span class="number">1</span>] = temp</span><br><span class="line">        x += <span class="number">1</span></span><br><span class="line">    num_items -= <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -117,6 +105,18 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
