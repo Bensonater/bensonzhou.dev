@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Verdana, Noto Sans SC:300,300italic,400,400italic,700,700italic|Open Sans:300,300italic,400,400italic,700,700italic|Verdana:300,300italic,400,400italic,700,700italic|Menlo:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato, Noto Sans SC:300,300italic,400,400italic,700,700italic|Lato:300,300italic,400,400italic,700,700italic|Fira Code:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
 <link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
 
 <script id="hexo-configurations">
@@ -244,13 +244,13 @@
 <h2 id="Paging-and-segmentation"><a href="#Paging-and-segmentation" class="headerlink" title="Paging and segmentation"></a>Paging and segmentation</h2><p>These are two different techniques for making the optimum use of memory by splitting it into small sections.</p>
 <p>In a paging system, memory is divided into fixed size pages of 4Kb each, and a process currently in memory may be held in several non-contiguous pages. This means the logical memory slots next to each other may be physically stored in anywhere in the memory space. A page table uses mapping to store a link between the physical memory address and the logical address of each process.</p>
 <p>Segmentation is the logical division of address space into varying length segments which depend on the program structure. As with paging, it is possible to load only a part of a program into memory initially.</p>
-<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I/O operation is complete or an error occurs.</p>
+<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I&#x2F;O operation is complete or an error occurs.</p>
 <p>Interrupts are also regularly triggered by a timer, to indicate that it is the turn of the next process to have processor time. This is for multi-tasking to take place.</p>
 <h3 id="Interrupts-service-routines"><a href="#Interrupts-service-routines" class="headerlink" title="Interrupts service routines"></a>Interrupts service routines</h3><p>When the CPU receives an interrupt signal, an interrupt service routine is called to deal with the interrupt. Depending on the type of interrupt, a particular routine will be run in order to service it. Interrupts have different priorities and low priority interrupt may be disabled while a higher priority interrupt is been serviced. Examples of interrupts in descending order of priority are given below:</p>
 <ul>
 <li>Power-fail interrupt</li>
 <li>Clock interrupt</li>
-<li>An I/O device sends a signal requesting service or signalling end of I/O operation</li>
+<li>An I&#x2F;O device sends a signal requesting service or signalling end of I&#x2F;O operation</li>
 </ul>
 <h2 id="Processor-scheduling"><a href="#Processor-scheduling" class="headerlink" title="Processor scheduling"></a>Processor scheduling</h2><p>With computers able to run multiple applications simultaneously, the operating system is responsible for allocating processor time to each one as they compete for the CPU. While one application is busy using CPU for processing, the OS can queue up the next process required by another application to make the most efficient use of the processor. By carrying out small parts of multiple larger tasks in turn, the processor can carry out several tasks simultaneously. This is what is meant by multitasking.</p>
 <p>The Scheduler is the operating system module responsible for making sure that processor time is used as efficiently as possible. The objectives of the scheduler are to:</p>
@@ -268,10 +268,10 @@
 <h3 id="Multi-level-feedback-queues"><a href="#Multi-level-feedback-queues" class="headerlink" title="Multi-level feedback queues"></a>Multi-level feedback queues</h3><p>The algorithm is designed to:</p>
 <ul>
 <li>Give preference to short jobs</li>
-<li>Give preference to I/O bound processes</li>
+<li>Give preference to I&#x2F;O bound processes</li>
 <li>Separate processes into categories based on their need for the processor</li>
 </ul>
-<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
+<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I&#x2F;O is much slower than processor speed, it is efficient to try and keep the I&#x2F;O devices as busy as possible, so that a bottleneck does not occur.</p>
 
     </div>
 

@@ -1,35 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Getting started with Anaconda and Jupyter Notebook</title>
-    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
-    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
-<span id="more"></span>
-
-<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
-<p>Run the installer and follow the instructions. </p>
-<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
-<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
-<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
-<p>To allow the notebook to view other files, it is recommended to start it from a Powershell/Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
-<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
-<p>In Powershell, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
-
-<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
-<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
-<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
-<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
-<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
-<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
-<p>If you want to shutdown all sessions, return to your previous Powershell/Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
-]]></content>
-  </entry>
-  <entry>
     <title>Bubble Sort</title>
     <url>/2019/09/20/bubble-sort/</url>
     <content><![CDATA[<p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
@@ -120,6 +91,56 @@
       </tags>
   </entry>
   <entry>
+    <title>Optimisation Algorithms</title>
+    <url>/2019/10/08/optimisation-algorithms/</url>
+    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
+<span id="more"></span>
+
+<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
+<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
+
+<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
+<p>The A* algorithm has two cost functions:</p>
+<ol>
+<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
+<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
+</ol>
+<p>The total cost of each node is calculated as f(x) &#x3D; g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Getting started with Anaconda and Jupyter Notebook</title>
+    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
+    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
+<span id="more"></span>
+
+<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
+<p>Run the installer and follow the instructions. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
+<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
+<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
+<p>To allow the notebook to view other files, it is recommended to start it from a Powershell&#x2F;Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
+<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
+<p>In Powershell, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
+<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
+<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
+<p>If you want to shutdown all sessions, return to your previous Powershell&#x2F;Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
+]]></content>
+  </entry>
+  <entry>
     <title>Merge Sort</title>
     <url>/2019/09/21/merge-sort/</url>
     <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
@@ -154,13 +175,13 @@
 <h2 id="Paging-and-segmentation"><a href="#Paging-and-segmentation" class="headerlink" title="Paging and segmentation"></a>Paging and segmentation</h2><p>These are two different techniques for making the optimum use of memory by splitting it into small sections.</p>
 <p>In a paging system, memory is divided into fixed size pages of 4Kb each, and a process currently in memory may be held in several non-contiguous pages. This means the logical memory slots next to each other may be physically stored in anywhere in the memory space. A page table uses mapping to store a link between the physical memory address and the logical address of each process.</p>
 <p>Segmentation is the logical division of address space into varying length segments which depend on the program structure. As with paging, it is possible to load only a part of a program into memory initially.</p>
-<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I/O operation is complete or an error occurs.</p>
+<h2 id="Interrupts"><a href="#Interrupts" class="headerlink" title="Interrupts"></a>Interrupts</h2><p>An interrupt is a signal from a software program, hardware device or internal clock to the CPU. A software interrupt occurs when an application program terminates or requests certain services from the OS. A hardware interrupt may occur, for example, when an I&#x2F;O operation is complete or an error occurs.</p>
 <p>Interrupts are also regularly triggered by a timer, to indicate that it is the turn of the next process to have processor time. This is for multi-tasking to take place.</p>
 <h3 id="Interrupts-service-routines"><a href="#Interrupts-service-routines" class="headerlink" title="Interrupts service routines"></a>Interrupts service routines</h3><p>When the CPU receives an interrupt signal, an interrupt service routine is called to deal with the interrupt. Depending on the type of interrupt, a particular routine will be run in order to service it. Interrupts have different priorities and low priority interrupt may be disabled while a higher priority interrupt is been serviced. Examples of interrupts in descending order of priority are given below:</p>
 <ul>
 <li>Power-fail interrupt</li>
 <li>Clock interrupt</li>
-<li>An I/O device sends a signal requesting service or signalling end of I/O operation</li>
+<li>An I&#x2F;O device sends a signal requesting service or signalling end of I&#x2F;O operation</li>
 </ul>
 <h2 id="Processor-scheduling"><a href="#Processor-scheduling" class="headerlink" title="Processor scheduling"></a>Processor scheduling</h2><p>With computers able to run multiple applications simultaneously, the operating system is responsible for allocating processor time to each one as they compete for the CPU. While one application is busy using CPU for processing, the OS can queue up the next process required by another application to make the most efficient use of the processor. By carrying out small parts of multiple larger tasks in turn, the processor can carry out several tasks simultaneously. This is what is meant by multitasking.</p>
 <p>The Scheduler is the operating system module responsible for making sure that processor time is used as efficiently as possible. The objectives of the scheduler are to:</p>
@@ -178,44 +199,10 @@
 <h3 id="Multi-level-feedback-queues"><a href="#Multi-level-feedback-queues" class="headerlink" title="Multi-level feedback queues"></a>Multi-level feedback queues</h3><p>The algorithm is designed to:</p>
 <ul>
 <li>Give preference to short jobs</li>
-<li>Give preference to I/O bound processes</li>
+<li>Give preference to I&#x2F;O bound processes</li>
 <li>Separate processes into categories based on their need for the processor</li>
 </ul>
-<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I/O is much slower than processor speed, it is efficient to try and keep the I/O devices as busy as possible, so that a bottleneck does not occur.</p>
-]]></content>
-      <tags>
-        <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Optimisation Algorithms</title>
-    <url>/2019/10/08/optimisation-algorithms/</url>
-    <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
-<span id="more"></span>
-
-<h2 id="Dijkstra’s-shortest-path-algorithm"><a href="#Dijkstra’s-shortest-path-algorithm" class="headerlink" title="Dijkstra’s shortest path algorithm"></a>Dijkstra’s shortest path algorithm</h2><p>Dijkstra’s algorithm is designed to find the shortest path between one particular start node and all other nodes in a weighted graph. This is similar to a breadth first search.</p>
-<h2 id="Pseudocode-Implementation"><a href="#Pseudocode-Implementation" class="headerlink" title="Pseudocode Implementation"></a>Pseudocode Implementation</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Assign a temporary distance value to every node, starting with zero for the initial node and infinity for every other node</span><br><span class="line">Add all the vertices to a priority queue, sorted by current distance (This puts the initial node at the front, the rest in random order.)</span><br><span class="line">while the queue is not empty</span><br><span class="line">    remove the vertex u from the front of the queue</span><br><span class="line">    for each unvisited neighbour w of the current vertex u</span><br><span class="line">        newDistance = distanceAtU + distanceFromUtoW</span><br><span class="line">        if newDistance &lt; distanceAtW then</span><br><span class="line">            distanceAtW = newDistance</span><br><span class="line">            change position of w in priority queue to reflect new distance to w</span><br></pre></td></tr></table></figure>
-
-<h2 id="The-A-algorithm"><a href="#The-A-algorithm" class="headerlink" title="The A* algorithm"></a>The A* algorithm</h2><p>Dijkstra’s algorithm is a special case of a more general path-finding algorithm called the A* algorithm. Dijkstra’s algorithm has one cost function, which is the real cost value (e.g. distance) from the source node to every other node.</p>
-<p>The A* algorithm has two cost functions:</p>
-<ol>
-<li>g(x) – as with Dijkstra’s algorithm, this is the real cost from the source to a given node.</li>
-<li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
-</ol>
-<p>The total cost of each node is calculated as f(x) = g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
-<span id="more"></span>
-
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+<p>The algorithm implements several job queues and jobs can move between queues, depending on how much processor time they use. Since I&#x2F;O is much slower than processor speed, it is efficient to try and keep the I&#x2F;O devices as busy as possible, so that a bottleneck does not occur.</p>
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
@@ -229,18 +216,45 @@
 
 <p>PageRank is effectively a popularity contest between websites defined by the number of votes or inbound links they receive, with a weighting to give more importance to some votes than others. This weighting is swayed by either the number of outbound links a site has or the importance (or PageRank) of a site. A website with a good reputation and high PageRank will have a higher weighting assigned to its ‘votes’ but its total vote is shared or diluted amongst all of the sites it links to.</p>
 <p>The PageRank algorithm itself is defined as:</p>
-<p>PR(A) = (1-d) + d (PR(T1)/C(T1) + … + PR(Tn)/C(Tn))</p>
+<p>PR(A) &#x3D; (1-d) + d (PR(T1)&#x2F;C(T1) + … + PR(Tn)&#x2F;C(Tn))</p>
 <p>where:</p>
 <ul>
 <li>PR(A) is the PageRank of page A</li>
 <li>C(Tn) is the total count of outbound links from web page n including the inbound link to page A. All webpages have a notional vote of 1. This is shared between all those it links to.</li>
-<li>PR(Tn)/C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
-<li>d is the damping factor set to prevent PR(Tn)/C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
+<li>PR(Tn)&#x2F;C(Tn) is the share of the vote that page A gets from pages T1 … Tn. Each of these vote fractions is added together and multiplied by d.</li>
+<li>d is the damping factor set to prevent PR(Tn)&#x2F;C(Tn) from having too much influence. It is notionally set to 0.85, which in probability terms says that after roughly six click-through links, the average user will either stop their session or enter a new web address in their browser directly rather than following another link.</li>
 </ul>
 <p>The PageRank of a page is constantly being recalculated and updated.</p>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Processor Performance</title>
+    <url>/2019/09/20/processor-performance/</url>
+    <content><![CDATA[<p>What makes some processor faster than others?</p>
+<span id="more"></span>
+
+<p>Factors affecting processor performance</p>
+<ul>
+<li>Clock speed</li>
+<li>The number of cores</li>
+<li>The amount and type of cache memory</li>
+</ul>
+<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
+<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
+<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
+<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
+<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
+<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
+<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
+<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
+<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
+<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+]]></content>
+      <tags>
+        <tag>Hardware</tag>
       </tags>
   </entry>
   <entry>
@@ -273,30 +287,16 @@
       </tags>
   </entry>
   <entry>
-    <title>Processor Performance</title>
-    <url>/2019/09/20/processor-performance/</url>
-    <content><![CDATA[<p>What makes some processor faster than others?</p>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
 <span id="more"></span>
 
-<p>Factors affecting processor performance</p>
-<ul>
-<li>Clock speed</li>
-<li>The number of cores</li>
-<li>The amount and type of cache memory</li>
-</ul>
-<h2 id="Clock-speed"><a href="#Clock-speed" class="headerlink" title="Clock speed"></a>Clock speed</h2><p>The system clock generated a series of signals, either 0 or 1. It does this several million times a second and synchronises CPU instructions. Each CPU operation starts as the clock changes and the CPU cannot perform operations faster than the clock cycle.</p>
-<h2 id="Number-of-cores"><a href="#Number-of-cores" class="headerlink" title="Number of cores"></a>Number of cores</h2><p>In a von Neumann architecture, instructions are fetched and executed one at a time in a serial manner. However, many computers nowadays have multiple cores. Each core is theoretically able to process a different instruction at the same time with its own fetch-execute cycle. However, it does not always perform twice as fast, because the software may not always be able to take full advantage of both cores.</p>
-<h2 id="Cache-memory"><a href="#Cache-memory" class="headerlink" title="Cache memory"></a>Cache memory</h2><p>Cache is a small amount of expensive, very fast memory inside the CPU. when an instruction is fetched from main memory, it is copied into the cache so if it’s needed again soon after, it can be fetched back from cache, which is much faster than going back to the main memory. As cache fills up, unused instructions or data still being held are replaced with more recent ones.</p>
-<h2 id="Pipelining"><a href="#Pipelining" class="headerlink" title="Pipelining"></a>Pipelining</h2><p>Pipelining is a technique used by some processors to improve performance. Without pipelining, the steps in the fetch-execute cycle take place one after the other. While the next instruction is being fetched, the ALU is idle.</p>
-<p>Using pipelining, the computer architecture allows the next instructions to be fetched at the same time as the processor is performing arithmetic or logic operations, holding them in a buffer close to the processor until the instruction can be performed.</p>
-<p>Processor pipelining is sometimes divided into an instruction pipeline and an arithmetic pipeline. The instruction pipeline consists of the stage in which an instruction is moved through the processor, including its being fetched, buffered and then executed. The arithmetic pipeline represents the parts of an arithmetic operation that can be broken down and overlapped as they are performed.<br>Pipelining is now common in microprocessors.</p>
-<h2 id="Address-bus"><a href="#Address-bus" class="headerlink" title="Address bus"></a>Address bus</h2><p>Each word, or group of bytes, in memory has its own specific address. When the processor wishes to read a word of data from memory, it first puts the address of the desired word on the address bus. The width of the address bus determines the maximum possible memory capacity of the system. For example, if the address bus consisted of only 8 lines, then the maximum address it could transmit would be 1111111, making the maximum memory capacity 256.</p>
-<h2 id="Data-bus"><a href="#Data-bus" class="headerlink" title="Data bus"></a>Data bus</h2><p>The data bus transmits the data held in a word of memory, between processor components and memory. The largest operand that can be held in a word is therefore related to the size of the data bus. If the data bus is 16 bits wide, a word cannot hold an integer greater than 2^16 - 1, or more than two characters. A wider data bus can transmit larger values, or more characters at a time, or allow more bits per instruction.</p>
-<h2 id="Words-and-word-size-in-relation-to-assembly-language"><a href="#Words-and-word-size-in-relation-to-assembly-language" class="headerlink" title="Words and word size in relation to assembly language"></a>Words and word size in relation to assembly language</h2><p>E.g. 010001(basic operation)01(address)00000011(oprand)</p>
-<p>In assembly language, the opcode will be expressed as a mnemonic such as ADD, SUB, LDA etc. with only six bits for the opcode, there cannot be more than 2^6 different instructions. The oprand has to be held in only 8 bits. In a PC, word size is more likely to be 32 or 64 bits.</p>
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
 ]]></content>
       <tags>
-        <tag>Hardware</tag>
+        <tag>CS Theory</tag>
       </tags>
   </entry>
   <entry>
@@ -404,7 +404,7 @@
 <li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
 </ul>
 <p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory/resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory&#x2F;resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
 <h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
 <p>The steps in the quick sort are as follows:</p>
 <ul>
