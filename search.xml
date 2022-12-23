@@ -44,6 +44,47 @@
       </tags>
   </entry>
   <entry>
+    <title>Getting started with Anaconda and Jupyter Notebook</title>
+    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
+    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
+<span id="more"></span>
+
+<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
+<p>Run the installer and follow the instructions. </p>
+<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
+<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
+<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
+<p>To allow the notebook to view other files, it is recommended to start it from a Powershell&#x2F;Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
+<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
+<p>In Powershell, run:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
+
+<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
+<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
+<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
+<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
+<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
+<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
+<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
+<p>If you want to shutdown all sessions, return to your previous Powershell&#x2F;Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
+]]></content>
+  </entry>
+  <entry>
+    <title>Insertion Sort</title>
+    <url>/2019/09/20/insertion-sort/</url>
+    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<span id="more"></span>
+
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Database</title>
     <url>/2019/11/16/database/</url>
     <content><![CDATA[<p>Relational database, normalisation and more</p>
@@ -79,18 +120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Insertion Sort</title>
-    <url>/2019/09/20/insertion-sort/</url>
-    <content><![CDATA[<p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<span id="more"></span>
-
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">numbers = [<span class="number">3</span>, <span class="number">2</span>, <span class="number">1</span>, <span class="number">5</span>, <span class="number">36</span>, <span class="number">7</span>, <span class="number">13</span>, <span class="number">21</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, <span class="built_in">len</span>(numbers)):</span><br><span class="line">    temp = numbers[i]</span><br><span class="line">    j = i</span><br><span class="line">    <span class="keyword">while</span> j &gt; <span class="number">0</span> <span class="keyword">and</span> temp &lt; numbers[j - <span class="number">1</span>]:</span><br><span class="line">        numbers[j] = numbers[j - <span class="number">1</span>]</span><br><span class="line">        j -= <span class="number">1</span></span><br><span class="line">    numbers[j] = temp</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(numbers)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Optimisation Algorithms</title>
     <url>/2019/10/08/optimisation-algorithms/</url>
     <content><![CDATA[<p>We increasingly rely on computers to find the optimum solution to a range of different problems. Finding the shortest path from A to B has numerous applications in everyday life and in computer-related problems.</p>
@@ -106,53 +135,6 @@
 <li>h(x) – this is the approximate cost from node x to the goal node. It is a heuristic function, meaning that it is a good or adequate solution, but not necessarily the optimum one. This algorithm stipulates that the heuristic function should never overestimate the cost, therefore the real cost should be greater than or equal h(x).</li>
 </ol>
 <p>The total cost of each node is calculated as f(x) &#x3D; g(x) + h(x). The A* algorithm focusses only on reaching the goal node, unlike Dijkstra’s algorithm which finds the lowest cost or shortest path to every node.</p>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Getting started with Anaconda and Jupyter Notebook</title>
-    <url>/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/</url>
-    <content><![CDATA[<p>Anaconda is a Python distribution that is widely used for data science purposes. It comes bundled with many useful libraries and tools. This article will describe how to get started with Anaconda and Jupyter Notebook in detail. </p>
-<span id="more"></span>
-
-<h2 id="Installing-Anaconda"><a href="#Installing-Anaconda" class="headerlink" title="Installing Anaconda"></a>Installing Anaconda</h2><p>Visit <a href="https://www.anaconda.com/products/individual">the anaconda website</a> and choose which installer to download based on your operating system. The website should automatically determine your OS, but you can also choose manually. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/download.png" alt="Click on the green download button for the installer. "></p>
-<p>Run the installer and follow the instructions. </p>
-<h2 id="Testing-Jupyter-Notebook"><a href="#Testing-Jupyter-Notebook" class="headerlink" title="Testing Jupyter Notebook"></a>Testing Jupyter Notebook</h2><p>Jupyter Notebook is an easy-to-use online editor. It provides a visual way to edit, run Python code and shows its output. </p>
-<p>Anaconda will automatically install Jupyter Notebook on your computer. On Windows, you should find a shortcut to Jupyter Notebook in the Start menu, under the Anaconda3 folder. Clicking on it will start the notebook. </p>
-<p>Be aware that the shortcut only grants you access to the files and sub-folders of where Jupyter Notebook has been installed.</p>
-<p>To allow the notebook to view other files, it is recommended to start it from a Powershell&#x2F;Terminal window. In this case, the current working directory will be the start-up directory of the Notebook. </p>
-<p>On Windows, navigate to the desired folder in File Manager, and hit Right Click + Shift. Select “Open Powershell window here” in the pop up menu. </p>
-<p>In Powershell, run:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure>
-
-<p>This will start the notebook server and open a new tab in your default browser. The URL to the Notebook is usually <a href="https://localhost:8888/tree">this</a>.</p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/jupyter.png" alt="The GUI of Jupyter Notebook. "></p>
-<p>If you get an error message about how “jupyter” is not a recognised command, add the location of Anaconda to your system’s PATH. </p>
-<h2 id="Using-Jupyter-Notebook"><a href="#Using-Jupyter-Notebook" class="headerlink" title="Using Jupyter Notebook"></a>Using Jupyter Notebook</h2><p>The interface of Jupyter Notebook is pretty self-explantory. You can either open an existing Notebook file that ends in <code>ipynb</code>, or create a new one by using the ‘New’ button and selecting ‘Python 3’ from the drop-down menu. </p>
-<p>Each notebook instance will have its own browser tab, meaning it is possible to edit multiple notebooks simultaneously. </p>
-<p>A notebook contain multiple code blocks. You can edit the code in each block and run it. Let’s try with a classic “Hello World” program. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/python.png" alt="Hello World Program"></p>
-<h2 id="Terminating-a-Notebook-session"><a href="#Terminating-a-Notebook-session" class="headerlink" title="Terminating a Notebook session"></a>Terminating a Notebook session</h2><p>You can manually shutdown notebook sessions. Find the “Running” tab on the Notebook webpage, or <a href="http://localhost:8888/tree#running">click here</a>. You should see how many terminals and notebooks are running currently. Closing one Notebook session will not affect the others. </p>
-<p><img src="/2021/07/05/Getting-started-with-Anaconda-and-Jupyter-Notebook/running.png" alt="A single notebook instance being run. "></p>
-<p>If you want to shutdown all sessions, return to your previous Powershell&#x2F;Terminal window where you started  Jupyter Notebook, and hit Ctrl+C or Cmd+C twice to terminate the process. </p>
-]]></content>
-  </entry>
-  <entry>
-    <title>Merge Sort</title>
-    <url>/2019/09/21/merge-sort/</url>
-    <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
-<span id="more"></span>
-
-<p>The basic steps are:</p>
-<ul>
-<li>Divide the unsorted list into n sublists, each containing one element</li>
-<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
-</ul>
-<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">merge_list</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(merge_list) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(merge_list) // <span class="number">2</span></span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            <span class="keyword">if</span> lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line">merge_sort(a)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 ]]></content>
       <tags>
         <tag>Algorithms</tag>
@@ -231,6 +213,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Merge Sort</title>
+    <url>/2019/09/21/merge-sort/</url>
+    <content><![CDATA[<p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<span id="more"></span>
+
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h2 id="Python-Implementation"><a href="#Python-Implementation" class="headerlink" title="Python Implementation"></a>Python Implementation</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">merge_list</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(merge_list) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(merge_list) // <span class="number">2</span></span><br><span class="line">        lefthalf = merge_list[:mid]</span><br><span class="line">        righthalf = merge_list[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(lefthalf)</span><br><span class="line">        merge_sort(righthalf)</span><br><span class="line"></span><br><span class="line">        i, j, k = <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            <span class="keyword">if</span> lefthalf[i] &lt; righthalf[j]:</span><br><span class="line">                merge_list[k] = lefthalf[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                merge_list[k] = righthalf[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(lefthalf):</span><br><span class="line">            merge_list[k] = lefthalf[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(righthalf):</span><br><span class="line">            merge_list[k] = righthalf[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">5</span>, <span class="number">3</span>, <span class="number">2</span>, <span class="number">7</span>, <span class="number">9</span>, <span class="number">1</span>, <span class="number">4</span>, <span class="number">8</span>]</span><br><span class="line">merge_sort(a)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Algorithms</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Problem Solving</title>
+    <url>/2019/11/11/problem-solving/</url>
+    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+<span id="more"></span>
+
+<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
+<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+]]></content>
+      <tags>
+        <tag>CS Theory</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Processor Performance</title>
     <url>/2019/09/20/processor-performance/</url>
     <content><![CDATA[<p>What makes some processor faster than others?</p>
@@ -287,16 +300,46 @@
       </tags>
   </entry>
   <entry>
-    <title>Problem Solving</title>
-    <url>/2019/11/11/problem-solving/</url>
-    <content><![CDATA[<p>Some methods used in computational problem-solving.</p>
+    <title>Time Complexities</title>
+    <url>/2019/09/20/time-complexities/</url>
+    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
 <span id="more"></span>
 
-<h2 id="Backtracking"><a href="#Backtracking" class="headerlink" title="Backtracking"></a>Backtracking</h2><p>Backtracking refers to trying out different candidates to a solution and discarding one as soon as it’s determined that candidate cannot contribute to a completed solution. Solving a maze using a depth-first traversal is a typical use of backtracking application.</p>
-<h2 id="Visualisation"><a href="#Visualisation" class="headerlink" title="Visualisation"></a>Visualisation</h2><p>Visualisation is a technique used to communicate a message or to solve a problem. A visual representation of a binary tree, for example, is much easier for humans to work out the relationship between nodes, than using a table. A flowchart is also a useful way to represent an algorithm.</p>
+<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
+<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
+<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
+<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
+<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
+<p>The basic steps are:</p>
+<ul>
+<li>Divide the unsorted list into n sublists, each containing one element</li>
+<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
+</ul>
+<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
+<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory&#x2F;resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
+<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
+<p>The steps in the quick sort are as follows:</p>
+<ul>
+<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
+</li>
+<li><p>Divide the remainder of the list into two partitions</p>
+<ul>
+<li>all elements less than the pivot value must be in the first partition</li>
+<li>all elements greater than the pivot value must be in the second partition</li>
+</ul>
+</li>
+</ul>
+<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
+<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
+<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
+<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
+<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
+<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
+</ul>
 ]]></content>
       <tags>
-        <tag>CS Theory</tag>
+        <tag>Algorithms</tag>
       </tags>
   </entry>
   <entry>
@@ -385,49 +428,6 @@
 ]]></content>
       <tags>
         <tag>CS Theory</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Time Complexities</title>
-    <url>/2019/09/20/time-complexities/</url>
-    <content><![CDATA[<p>Time complexity refers to how long it would take to run an algorithm. It is usually expressed in the <strong>Big O notation</strong>, such as O(n). An algorithm with a low order of n is favourable.</p>
-<span id="more"></span>
-
-<h2 id="Bubble-Sort"><a href="#Bubble-Sort" class="headerlink" title="Bubble Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble Sort</a></h2><p>Bubble sort is a simple sorting algorithm. It compares the two adjacent objects and swap if they are in the wrong order. The first pass place the largest object last. Further passes are done until no swaps are needed, in which case the list is sorted.</p>
-<p>The bubble sort requires close to n passes through the list, with each pass requiring a maximum of n-1 swaps. It is of order O(n^2).</p>
-<h2 id="Insertion-Sort"><a href="#Insertion-Sort" class="headerlink" title="Insertion Sort"></a><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion Sort</a></h2><p>Insertion sort is a simple sorting algorithm. It starts off with the second element of the list, and then compare it to all the elements in front of it and inserting it in the right place. It iterates through the list like this and therefore sorts it.</p>
-<p>The insertion sort also has two nested loops and so has time complexity O(n^2). However, if the list is almost completely sorted, the time complexity is reduced to close to O(n).</p>
-<h2 id="Merge-Sort"><a href="#Merge-Sort" class="headerlink" title="Merge Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a></h2><p>The merge sort can be described as the ‘divide and conquer’ approach. The list is recursively divided in half, forming two sublists, until each sublist is of length one. Then the sublists are sorted and merged together to form a larger sublist, until there’s only a single sorted list remaining.</p>
-<p>The basic steps are:</p>
-<ul>
-<li>Divide the unsorted list into n sublists, each containing one element</li>
-<li>Repeatedly merge sublists to produce new sorted sublists until there is only one sublist remaining. This is the sorted list</li>
-</ul>
-<p>Given that there are n sublists to be merged and ‘divide and conquer’ has been used, the time complexity is O(n log n) for the merge sort.</p>
-<h3 id="Space-Complexity"><a href="#Space-Complexity" class="headerlink" title="Space Complexity"></a>Space Complexity</h3><p>The term space complexity refers to the amount of memory&#x2F;resources an algorithm requires. The bubble sort requires n memory locations for a list of size n. The merge sort however requires 2n memory locations as it has to hold both left and right half of the list.</p>
-<h2 id="Quick-Sort"><a href="#Quick-Sort" class="headerlink" title="Quick Sort"></a><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a></h2><p>The quick sort algorithm also uses the ‘divide and conquer’ approach. However it doesn’t require the additional memory needed by the merge sort.</p>
-<p>The steps in the quick sort are as follows:</p>
-<ul>
-<li><p>Select a value called the pivot value. There are different ways to choose the pivot value but we will choose the first item in the list. The actual position where the pivot value belongs in the final sorted list, called the split point, will be used to divide the list for subsequent calls.</p>
-</li>
-<li><p>Divide the remainder of the list into two partitions</p>
-<ul>
-<li>all elements less than the pivot value must be in the first partition</li>
-<li>all elements greater than the pivot value must be in the second partition</li>
-</ul>
-</li>
-</ul>
-<p>The order of the elements in each partition is not significant in this explanation. It will become clearer in the explanation of the detailed procedure.</p>
-<p>The quicksort algorithm is extremely fast. If the partition always occurs in the middle of the list, there will be log n divisions in a list of length n, and each of the n items needs to be checked against the pivot value to find the split point. It therefore has time complexity O(n log n).</p>
-<h2 id="Summary-of-sorting-algorithms"><a href="#Summary-of-sorting-algorithms" class="headerlink" title="Summary of sorting algorithms"></a>Summary of sorting algorithms</h2><ul>
-<li><a href="/2019/09/20/Programming_and_Algorithms/bubble-sort/">Bubble sort</a> is the slowest of the sorts, with time complexity O(n^2)</li>
-<li><a href="/2019/09/20/Programming_and_Algorithms/insertion-sort/">Insertion sort</a> is O(n^2), but if the list is already almost sorted, this reduces to O(n)</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/merge-sort/">Merge Sort</a> is O(n log n) but requires additional memory space for the merging process</li>
-<li><a href="/2019/09/21/Programming_and_Algorithms/quick-sort/">Quick Sort</a> is generally the fastest sort, but is dependent on using a pivot that is not close to the smallest or largest elements of the list. There are several methods for selecting a pivot to ensure this does not happen. It has average time complexity O(n log n). It does not require additional memory space.</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>Algorithms</tag>
       </tags>
   </entry>
 </search>
